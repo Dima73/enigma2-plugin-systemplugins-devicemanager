@@ -1,0 +1,354 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-02-28 19:54+0100\n"
+"PO-Revision-Date: 2017-10-15 20:32+0300\n"
+"Language-Team: LANGUAGE <Dima-73@inbox.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.0.1\n"
+
+msgid " as HDD ?"
+msgstr " как HDD ?"
+
+msgid "/media/custom"
+msgstr "/media/custom"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid ""
+"Cannot format current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Невозможно отформатировать текущее устройство.\n"
+"Вероятно запись в процессе, таймшифт или какие запущенные программы "
+"(например самба, своп, торренты или nfsd),могут быть причиной этой "
+"проблемы.\n"
+"Пожалуйста, остановите эти процессы/программы и попробуйте еще раз."
+
+msgid "Cannot format partition %d"
+msgstr "Невозможно отформатировать раздел %d"
+
+msgid ""
+"Cannot mount new drive.\n"
+"Please check filesystem or format it and try again"
+msgstr ""
+"Невозможно смонтировать новое устройство.\n"
+"Пожалуйста выполните проверку файловой системы или форматирование и "
+"попробуйте еще раз."
+
+msgid ""
+"Cannot umount current device.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Невозможно отмонтировать текущее устойство.\n"
+"Вероятно запись в процессе, таймшифт или какие запущенные программы "
+"(например самба, своп, торренты или nfsd),могут быть причиной этой "
+"проблемы.\n"
+"Пожалуйста, остановите эти процессы/программы и попробуйте еще раз."
+
+msgid ""
+"Cannot umount current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Невозможно отмонтировать текущее устойство.\n"
+"Вероятно запись в процессе, таймшифт или какие запущенные программы "
+"(например самба, своп, торренты или nfsd),могут быть причиной этой "
+"проблемы.\n"
+"Пожалуйста, остановите эти процессы/программы и попробуйте еще раз."
+
+msgid "Change old drive with this new drive"
+msgstr "Смена старого диска на новый диск"
+
+msgid "Check"
+msgstr "Проверка"
+
+msgid "Check disk terminated with success"
+msgstr "Проверка диска завершена с успехом"
+
+msgid "Checking disk"
+msgstr "Проверка диска"
+
+msgid "Checking disk %s"
+msgstr "Проверка диска %s"
+
+msgid "Cylinders: %s (max) %s (current)"
+msgstr "Цилиндры: %s (макс.) %s (текущий)"
+
+msgid "Cylinders: unknown"
+msgstr "Цилиндры: неизвестно"
+
+msgid "Device Details"
+msgstr "Сведения об устройстве"
+
+msgid ""
+"Device Fixed Mount Point change needs a system restart in order to take "
+"effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Необходимо выполнить перезагрузку системы, для применения нового "
+"монтирования.\n"
+"Выполнить перезагрузку ресивера сейчас?"
+
+msgid "Device Manager"
+msgstr "Менеджер устройств хранения"
+
+msgid "Device Manager - Fast Mounted Remove"
+msgstr "Менеджер устройств хранения - отмонтирование"
+
+msgid "Disk temperature: %s"
+msgstr "Температура устройства: %s"
+
+msgid "Disk temperature: unknown"
+msgstr "Температура устройства: неизвестно"
+
+msgid "Error checking disk. The disk may be damaged"
+msgstr "Ошибка проверки устройства. Возможно устройство повреждено."
+
+msgid "Error formatting disk. The disk may be damaged"
+msgstr "Ошибка форматирования устройства. Возможно устройство повреждено."
+
+msgid "Exit"
+msgstr "Выход"
+
+msgid "Fast Mounted Remove"
+msgstr "Быстрое удаление монтирования"
+
+msgid "Fast mount"
+msgstr "Авто монтирование"
+
+msgid ""
+"Fast mounted Media unmounted.\n"
+"You can safely remove the Device now, if no further Partitions (displayed as "
+"P.x on Devicelist - where x >=2) are mounted on the same Device.\n"
+"Please unmount Fixed Mounted Devices with Device Manager Panel!"
+msgstr ""
+"Медиа устройство отмонтировано.\n"
+"Вы можете безопасно удалить устройство прямо сейчас, если нет дополнительных "
+"разделов (отображаются как P.x в списке устройств - где x >=2), "
+"смонтированых на одном устройстве хранения.\n"
+"Пожалуйста, отмонтируйте дополнительные разделы устройства с помощью плагина!"
+
+msgid "Firmware: %s"
+msgstr "Прошивка: %s"
+
+msgid "Firmware: unknown"
+msgstr "Прошивка: неизвестно"
+
+msgid "Fixed mount"
+msgstr "Фиксированное монтирование (запись в fstab)"
+
+msgid ""
+"Fixed mounted first initialized Storage Device to /media/hdd. It needs a "
+"system restart in order to take effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Для завершения фиксированного монтирования к /media/hdd и инициализации "
+"устройства хранения,необходим рестарт системы для применения изменений.\n"
+"Выполнить перезагрузку ресивера сейчас?"
+
+msgid "Format"
+msgstr "Форматировать"
+
+msgid "Format as"
+msgstr "Форматировать как"
+
+msgid "Format terminated with success"
+msgstr "Форматирование успешно завершено"
+
+msgid "Format/Partition your Devices and manage Mountpoints"
+msgstr "Форматирование/создание разделов для устройств хранения"
+
+msgid "Formatting disk"
+msgstr "Форматирование диска"
+
+msgid "Formatting disk %s"
+msgstr "Форматирование диска %s"
+
+msgid "Formatting partition %d"
+msgstr "Форматирование раздела %d"
+
+msgid "Four partitions (25% - 25% - 25% - 25%)"
+msgstr "Четыре раздела (25% - 25% - 25% - 25%)"
+
+msgid "Harddisk standby after"
+msgstr "Режим ожидания через"
+
+msgid "Heads: %s (max) %s (current)"
+msgstr "Головки: %s (макс.) %s (текущий)"
+
+msgid "Heads: unknown"
+msgstr "Головки: неизвестно"
+
+msgid "Info"
+msgstr "Инфо"
+
+msgid "Initialize"
+msgstr "Инициализация"
+
+msgid "Initialize disk"
+msgstr "Инициализация диска"
+
+msgid "Insert mount point:"
+msgstr "Вставить точку монтирования:"
+
+msgid "Keep old drive"
+msgstr "Сохранить старое устройство"
+
+msgid "Model: %s"
+msgstr "Модель: %s"
+
+msgid "Model: unknown"
+msgstr "Модель: неизвестно"
+
+msgid "Mount"
+msgstr "Монтирование"
+
+msgid "Mount as /media/hdd1"
+msgstr "Смонтировать как /media/hdd1"
+
+msgid "Mount as /media/hdd2"
+msgstr "Смонтировать как /media/hdd2"
+
+msgid "Mount as /media/hdd3"
+msgstr "Смонтировать как /media/hdd3"
+
+msgid "Mount as /media/hdd4"
+msgstr "Смонтировать как /media/hdd4"
+
+msgid "Mount as /media/hdd5"
+msgstr "Смонтировать как /media/hdd5"
+
+msgid "Mount as /media/usb"
+msgstr "Смонтировать как /media/usb1"
+
+msgid "Mount as /media/usb1"
+msgstr "Смонтировать как /media/usb1"
+
+msgid "Mount as /media/usb2"
+msgstr "Смонтировать как /media/usb5"
+
+msgid "Mount as /media/usb3"
+msgstr "Смонтировать как /media/usb4"
+
+msgid "Mount as /media/usb4"
+msgstr "Смонтировать как /media/usb4"
+
+msgid "Mount as /media/usb5"
+msgstr "Смонтировать как /media/usb5"
+
+msgid "Mount as main hdd"
+msgstr "Смонтировать как основной диск /media/hdd"
+
+msgid "Mount on custom path"
+msgstr "Смонтировать по пользовательскому пути в /media"
+
+msgid "Mount point exist!"
+msgstr "Тоска монтирования уже существует!"
+
+msgid "Mountpoints"
+msgstr "Точка монтирования"
+
+msgid "No - simple"
+msgstr "Нет - просто"
+
+msgid "One partition"
+msgstr "Один раздел"
+
+msgid "Or use standard 'Harddisk Setup' to initialize your drive in ext4."
+msgstr ""
+"Или используйте стандартную 'Настройка дисков' для инициализации Вашего "
+"устройства в ext4 (рекомендуется)!"
+
+msgid "P. %d - %s (Fast: %s)"
+msgstr "P. %d - %s (авто: %s)"
+
+msgid "P. %d - %s (Fixed: %s)"
+msgstr "P. %d - %s (fstab: %s)"
+
+msgid "P.%s (Fast: %s)"
+msgstr "P.%s (авто: %s)"
+
+msgid "P.%s (Fixed: %s)"
+msgstr "P.%s (fstab: %s)"
+
+msgid "Partitioner"
+msgstr "Создание разделов"
+
+msgid "Partitioning failed!"
+msgstr "Ошибка создания разделов!"
+
+msgid "Partitioning..."
+msgstr "Создаем разделы..."
+
+msgid "Partitions"
+msgstr "Разделы"
+
+msgid "Please select your preferred configuration."
+msgstr "Пожалуйста, выберите Вашу предпочитаемую конфигурацию."
+
+msgid "Quick and safe remove for your mounted devices "
+msgstr "Быстрое и безопасное удаление для смонтированных устройств"
+
+msgid "Read cache speed: %s"
+msgstr "Скорость чтения кэша: %s"
+
+msgid "Read disk cache speed: unknown"
+msgstr "Скорость чтения кэша: неизвестно"
+
+msgid "Read disk speed: unknown"
+msgstr "Скорость чтения диска: неизвестно"
+
+msgid "Read speed: %s"
+msgstr "Скорость чтения: %s"
+
+msgid "Restart STB"
+msgstr "Restart ресивера"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Sectors: %s (max) %s (current)"
+msgstr "Секторов: %s (макс.) %s (текущий)"
+
+msgid "Sectors: unknown"
+msgstr "Секторов: неизвестно"
+
+msgid "Selected mount point is already used by another drive."
+msgstr "Выбранная точка монтирования уже используется другим диском."
+
+msgid "Serial: %s"
+msgstr "Сериал: %s"
+
+msgid "Serial: unknown"
+msgstr "Сериал: неизвестно"
+
+msgid "Three partitions (33% - 33% - 33%)"
+msgstr "Три раздела (33% - 33% - 33%)"
+
+msgid "Two partitions (50% - 50%)"
+msgstr "Два раздела (50% - 50%)"
+
+msgid "Two partitions (75% - 25%)"
+msgstr "Два раздела (75% - 25%)"
+
+msgid "Unmount"
+msgstr "Отмонтировать"
+
+msgid "Yes - fstab entry as /media/hdd"
+msgstr "Да - запись в fstab, как /media/hdd"
+
+msgid "You need to initialize your storage device first"
+msgstr ""
+"Вам необходимо инициализировать устройство хранения данных в первую очередь"
