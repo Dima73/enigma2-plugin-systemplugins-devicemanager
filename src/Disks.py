@@ -467,14 +467,20 @@ class Disks:
 			cmd += "-m0 -O dir_index /dev/" + dev
 			os.system("opkg update && opkg install kernel-module-ext3")
 		elif fstype == 2:
-			cmd = "mkfs.ext2 -F /dev/" + dev
+			cmd = 'mkfs.ext2 -F '
+			if part_size > 2048:
+					cmd += '-T largefile '
+			cmd += '-m0 /dev/' + dev
 			os.system("opkg update && opkg install kernel-module-ext2")
 		elif fstype == 3:
 			cmd = "mkfs.ntfs -f /dev/" + dev
 		elif fstype == 4:
 			cmd = "mkfs.exfat /dev/" + dev
 		elif fstype == 5:
-			cmd = "mkfs.vfat -F32 /dev/" + dev
+			if part_size > 4194304:
+				cmd = 'mkfs.vfat -I -S4096 -F32 /dev/' + dev
+			else:
+				cmd = 'mkfs.vfat -I -F32 /dev/' + dev
 		else:
 			if len(oldmp) > 0:
 				self.mount(dev, oldmp)
