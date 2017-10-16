@@ -443,10 +443,9 @@ class Disks:
 				return -2
 		else:
 			oldmp = ""
-
+		psize = size / 1024
 		if fstype == 0:
 			cmd = "mkfs.ext4 -F "
-			psize = size / 1024
 			if psize > 20000:
 				try:
 					version = open('/proc/version', 'r').read().split(' ', 4)[2].split('.', 2)[:2]
@@ -457,7 +456,6 @@ class Disks:
 			cmd += '-m0 -O dir_index /dev/' + dev
 		elif fstype == 1:
 			cmd = "mkfs.ext3 -F "
-			psize = size / 1024
 			if psize > 250000:
 				cmd += "-T largefile -O sparse_super -N 262144 "
 			elif psize > 16384:
@@ -468,7 +466,7 @@ class Disks:
 			os.system("opkg update && opkg install kernel-module-ext3")
 		elif fstype == 2:
 			cmd = 'mkfs.ext2 -F '
-			if part_size > 2048:
+			if psize > 2048:
 					cmd += '-T largefile '
 			cmd += '-m0 /dev/' + dev
 			os.system("opkg update && opkg install kernel-module-ext2")
@@ -477,7 +475,7 @@ class Disks:
 		elif fstype == 4:
 			cmd = "mkfs.exfat /dev/" + dev
 		elif fstype == 5:
-			if part_size > 4194304:
+			if psize > 4194304:
 				cmd = 'mkfs.vfat -I -S4096 -F32 /dev/' + dev
 			else:
 				cmd = 'mkfs.vfat -I -F32 /dev/' + dev
