@@ -1,0 +1,340 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: enigma2-plugin-systemplugins-devicemanager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-23 07:34+0200\n"
+"PO-Revision-Date: 2012-05-23 17:53+0100\n"
+"Last-Translator: Xtrend Support <www.xtrend-home.de>\n"
+"Language-Team: Xtrend Support <info@xtrend-home.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "/media/custom"
+msgstr "/media/custom"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid ""
+"Cannot format current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Die ausgewählte Partition kann nicht formatiert werden.\n"
+"Eine laufende Aufnahme, Timeshift oder externe Anwendungen (wie Samba, "
+"Auslagerungsdatei und NFS-Server) können diese Probleme verursachen.\n"
+"Bitte beenden Sie diese Anwendungen/Prozesse und versuchen es erneut."
+
+msgid "Cannot format partition %d"
+msgstr "Partition %d konnte nicht formatiert werden."
+
+msgid ""
+"Cannot mount new drive.\n"
+"Please check filesystem or format it and try again"
+msgstr ""
+"Die Partition konnte nicht eingehangen werden.\n"
+"Bitte führen Sie eine Dateisystemüberprüfung durch oder formatieren Sie "
+"diese und versuchen es erneut."
+
+msgid ""
+"Cannot umount current device.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Das ausgewählte Speichermedium kann nicht ausgehangen werden.\n"
+"Eine laufende Aufnahme, Timeshift oder externe Anwendungen (wie Samba, "
+"Auslagerungsdatei und NFS-Server) können diese Probleme verursachen.\n"
+"Bitte beenden Sie diese Anwendungen/Prozesse und versuchen es erneut."
+
+msgid ""
+"Cannot umount current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Die ausgewählte Partition kann nicht ausgehangen werden.\n"
+"Eine laufende Aufnahme, Timeshift oder externe Anwendungen (wie Samba, "
+"Auslagerungsdatei und NFS-Server) können diese Probleme verursachen.\n"
+"Bitte beenden Sie diese Anwendungen/Prozesse und versuchen es erneut."
+
+msgid "Change old drive with this new drive"
+msgstr "Auf neues Speichermedium ändern"
+
+msgid "Check"
+msgstr "Überprüfen"
+
+msgid "Check disk terminated with success"
+msgstr "Die Dateisystemüberprüfung wurde erfolgreich durchgeführt."
+
+msgid "Checking disk"
+msgstr "Überprüfe Dateisystem"
+
+msgid "Checking disk %s"
+msgstr "Überprüfe Dateisystem %s"
+
+msgid "Cylinders: %s (max) %s (current)"
+msgstr "Zylinder: %s (max) %s (aktuell)"
+
+msgid "Cylinders: unknown"
+msgstr "Zylinder: unbekannt"
+
+msgid "Device Details"
+msgstr "Geräte Details"
+
+msgid ""
+"Device Fixed Mount Point change needs a system restart in order to take "
+"effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Die Anpassung des festen Einhängepunkts erfordert einen Systemneustart, "
+"damit diese wirksam wird.\n"
+"Wollen Sie Ihre STB jetzt neu starten?"
+
+msgid "Device Manager"
+msgstr "Geräteverwaltung"
+
+msgid "Device Manager - Fast Mounted Remove"
+msgstr "Geräteverwaltung - Fast Mounted Entfernen"
+
+msgid "Devicelist"
+msgstr "Geräteliste"
+
+msgid "Disk temperature: %s"
+msgstr "Festplattentemperatur: %s"
+
+msgid "Disk temperature: unknown"
+msgstr "Festplattentemperatur: unbekannt"
+
+msgid "Error checking disk. The disk may be damaged"
+msgstr ""
+"Fehler bei der Dateisystemüberprüfung. Die Partition könnte fehlerhaft sein."
+
+msgid "Error formatting disk. The disk may be damaged"
+msgstr ""
+"Fehler bei der Dateisystemerstellung. Die Partition könnte fehlerhaft sein."
+
+msgid "Exit"
+msgstr "Beenden"
+
+msgid "Fast Mounted Remove"
+msgstr "Fast Mounted Entfernen"
+
+msgid "Fast mount"
+msgstr "Fast mount"
+
+msgid ""
+"Fast mounted Media unmounted.\n"
+"You can safely remove the Device now, if no further Partitions (displayed as "
+"P.x on Devicelist - where x >=2) are mounted on the same Device.\n"
+"Please unmount Fixed Mounted Devices with Device Manager Panel!"
+msgstr ""
+"Fast mounted Speichermedium ausgehangen.\n"
+"Sie können das Gerät sicher entfernen, falls keine weiteren Partitionen "
+"(angezeigt als P.x in der Geräteliste - mit x >=2)  auf denselben Gerät "
+"eingehangen sind.\n"
+"Bitte hängen Sie Ihre Fixed mounted Speichermedien mit der Geräteverwaltung "
+"aus!"
+
+msgid "Firmware: %s"
+msgstr "Firmware: %s"
+
+msgid "Firmware: unknown"
+msgstr "Firmware: unbekannt"
+
+msgid "Fixed mount"
+msgstr "Fixed mount"
+
+msgid ""
+"Fixed mounted first initialized Storage Device to /media/hdd. It needs a "
+"system restart in order to take effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Dem ersten initialisierten Speichermedium wurde der Einhängepunkt /media/hdd "
+"fest zugewiesen. Diese Anpassung erfordert einen Systemneustart, damit diese "
+"wirksam wird.\n"
+"Wollen Sie Ihre STB jetzt neu starten?"
+
+msgid "Format"
+msgstr "Formatieren"
+
+msgid "Format as"
+msgstr "Formatiere als"
+
+msgid "Format terminated with success"
+msgstr "Die Formatierung wurde erfolgreich durchgeführt."
+
+msgid "Format/Partition your Devices and manage Mountpoints"
+msgstr ""
+"Formatieren/Partitionieren Ihrer Speichermedien und Verwalten Ihrer "
+"Einhängepunkte"
+
+msgid "Formatting disk"
+msgstr "Formatiere Dateisystem"
+
+msgid "Formatting disk %s"
+msgstr "Formatiere Dateisystem %s"
+
+msgid "Formatting partition %d"
+msgstr "Formatiere Partition %d"
+
+msgid "Four partitions (25% - 25% - 25% - 25%)"
+msgstr "4 Partitionen (25% - 25% - 25% - 25%)"
+
+msgid "Harddisk standby after"
+msgstr "Festplatten-Standby nach"
+
+msgid "Heads: %s (max) %s (current)"
+msgstr "Köpfe: %s (max) %s (aktuell)"
+
+msgid "Heads: unknown"
+msgstr "Köpfe: unbekannt"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Initialize"
+msgstr "Initialisieren"
+
+msgid "Initialize disk"
+msgstr "Initialisiere Speichermedium"
+
+msgid "Insert mount point:"
+msgstr "Einhängepunkt eingeben:"
+
+msgid "Keep old drive"
+msgstr "Bisherige Zuordnung beibehalten"
+
+msgid "Model: %s"
+msgstr "Modell: %s"
+
+msgid "Model: unknown"
+msgstr "Modell: unbekannt"
+
+msgid "Mount"
+msgstr "Einhängen"
+
+msgid "Mount as /media/hdd1"
+msgstr "Als /media/hdd1 einhängen"
+
+msgid "Mount as /media/hdd2"
+msgstr "Als /media/hdd2 einhängen"
+
+msgid "Mount as /media/hdd3"
+msgstr "Als /media/hdd3 einhängen"
+
+msgid "Mount as /media/hdd4"
+msgstr "Als /media/hdd4 einhängen"
+
+msgid "Mount as /media/hdd5"
+msgstr "Als /media/hdd5 einhängen"
+
+msgid "Mount as /media/usb"
+msgstr "Als /media/usb einhängen"
+
+msgid "Mount as /media/usb1"
+msgstr "Als /media/usb1 einhängen"
+
+msgid "Mount as /media/usb2"
+msgstr "Als /media/usb2 einhängen"
+
+msgid "Mount as /media/usb3"
+msgstr "Als /media/usb3 einhängen"
+
+msgid "Mount as /media/usb4"
+msgstr "Als /media/usb4 einhängen"
+
+msgid "Mount as /media/usb5"
+msgstr "Als /media/usb5 einhängen"
+
+msgid "Mount as main hdd"
+msgstr "Als Hauptspeichermedium einhängen (/media/hdd)"
+
+msgid "Mount on custom path"
+msgstr "Auf benutzerdefinierten Pfad einhängen"
+
+msgid "Mount point exist!"
+msgstr "Einhängepunkt existiert bereits!"
+
+msgid "Mountpoints"
+msgstr "Einhängepunkte"
+
+msgid "Mounts"
+msgstr "Mounts"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "One partition"
+msgstr "1 Partition (100%)"
+
+msgid "Partitioner"
+msgstr "Partitionierer"
+
+msgid "Partitioning failed!"
+msgstr "Partitionierung fehlgeschlagen!"
+
+msgid "Partitioning..."
+msgstr "Partitioniere..."
+
+msgid "Partitions"
+msgstr "Partitionen"
+
+msgid "Please select your preferred configuration."
+msgstr "Bitte wählen Sie Ihre bevorzugte Konfiguration aus."
+
+msgid "Quick and safe remove for your mounted devices "
+msgstr "Schnelles und sicheres Entfernen Ihrer eingehangenen Speichermedien"
+
+msgid "Read cache speed: %s"
+msgstr "Lesespeed (cached): %s"
+
+msgid "Read disk cache speed: unknown"
+msgstr "Lesespeed (cached): unbekannt"
+
+msgid "Read disk speed: unknown"
+msgstr "Lesespeed: unbekannt"
+
+msgid "Read speed: %s"
+msgstr "Lesegeschwindigkeit: %s"
+
+msgid "Restart STB"
+msgstr "Neustart"
+
+msgid "Sectors: %s (max) %s (current)"
+msgstr "Sektoren: %s (max) %s (aktuell)"
+
+msgid "Sectors: unknown"
+msgstr "Sektoren: unbekannt"
+
+msgid "Selected mount point is already used by another drive."
+msgstr ""
+"Ausgewählter Einhängepunkt wird bereits von einem anderen Speichermedium "
+"genutzt."
+
+msgid "Serial: %s"
+msgstr "Seriennummer: %s"
+
+msgid "Serial: unknown"
+msgstr "Seriennummer: unbekannt"
+
+msgid "Three partitions (33% - 33% - 33%)"
+msgstr "3 Partitionen (33% - 33% - 33%)"
+
+msgid "Two partitions (50% - 50%)"
+msgstr "2 Partitionen (50% - 50%)"
+
+msgid "Two partitions (75% - 25%)"
+msgstr "2 Partitionen (75% - 25%)"
+
+msgid "Unmount"
+msgstr "Aushängen"
+
+msgid "You need to initialize your storage device first"
+msgstr "Sie müssen Ihr Speichermedium zuerst initialisieren."
