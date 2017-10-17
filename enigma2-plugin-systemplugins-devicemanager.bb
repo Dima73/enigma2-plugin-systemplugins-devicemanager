@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://README.md;md5=f2744f11077590f84608b54169c8b35d"
 SRC_URI = "git://github.com/Dima73/enigma2-plugin-systemplugins-devicemanager.git"
 S = "${WORKDIR}/git"
 
-RRECOMMENDS_${PN} = "e2fsprogs-e2fsck e2fsprogs-mke2fs libblkid1 ntfsprogs hddtemp dosfstools e2fsprogs util-linux-sfdisk exfat-fuse exfat-utils"
+RRECOMMENDS_${PN} = "e2fsprogs-e2fsck e2fsprogs-mke2fs ntfsprogs hddtemp dosfstools e2fsprogs util-linux-sfdisk exfat-fuse exfat-utils"
 
 inherit gitpkgv
 
