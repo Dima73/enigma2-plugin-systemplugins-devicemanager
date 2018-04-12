@@ -1,0 +1,471 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DeviceManager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-09 10:40+0100\n"
+"PO-Revision-Date: 2018-04-05 22:22+0200\n"
+"Last-Translator: Gringo <openpli@tiscali.it>\n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: HddSetup.py:229
+msgid " as HDD ?"
+msgstr " come disco rigido ?"
+
+#: HddMount.py:131 HddMount.py:161
+msgid "/media/custom"
+msgstr "/media/personale"
+
+#: HddPartitions.py:209 HddPartitions.py:215 HddPartitions.py:221
+#: HddPartitions.py:226 HddSetup.py:209 HddSetup.py:218 HddSetup.py:240
+msgid "Cancel"
+msgstr "Annullare"
+
+#: HddPartitions.py:161
+msgid ""
+"Cannot format current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossibile formattare questa unità.\n"
+"Una registrazione in corso, il timeshift o altri processi esterni (come "
+"Samba, swapfile e nfsd) potrebbero essere la causa del problema.\n"
+"Fermare queste azioni/applicazioni e riprovare ancora."
+
+#: HddSetup.py:152
+#, python-format
+msgid "Cannot format partition %d"
+msgstr "Impossibile formattare la partizione %d"
+
+#: HddMount.py:191
+msgid ""
+"Cannot mount new drive.\n"
+"Please check filesystem or format it and try again"
+msgstr ""
+"Impossibile montare la nuova unità.\n"
+"Verificare il filesystem o formattarla e riprovare ancora."
+
+#: HddPartitions.py:267 HddSetup.py:179
+msgid ""
+"Cannot umount current device.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossibile smontare il dispositivo attuale.\n"
+"Una registrazione in corso, il timeshift o altri processi esterni (come "
+"Samba, swapfile e nfsd) potrebbero essere la causa del problema.\n"
+"Fermare queste azioni/applicazioni e riprovare ancora."
+
+#: HddMount.py:183 HddPartitions.py:151
+msgid ""
+"Cannot umount current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossibile smontare l'unità attuale.\n"
+"Una registrazione in corso, il timeshift o altri processi esterni (come "
+"Samba, swapfile e nfsd) potrebbero essere la causa del problema.\n"
+"Fermare queste azioni/applicazioni e riprovare ancora."
+
+#: HddMount.py:173
+msgid "Change old drive with this new drive"
+msgstr "Cambiare la vecchia unità con una nuova"
+
+#: HddPartitions.py:110 HddPartitions.py:133
+msgid "Check"
+msgstr "Verificare"
+
+#: HddPartitions.py:149
+msgid "Check disk terminated with success"
+msgstr "Verifica disco completata con successo"
+
+#: HddPartitions.py:198
+msgid "Checking disk"
+msgstr "Verifica disco..."
+
+#: HddPartitions.py:198
+#, python-format
+msgid "Checking disk %s"
+msgstr "Verifica disco %s..."
+
+#: HddInfo.py:118
+#, python-format
+msgid "Cylinders: %s (max) %s (current)"
+msgstr "Cilindri: %s (max) %s (attuali)"
+
+#: HddInfo.py:70
+msgid "Cylinders: unknown"
+msgstr "Cilindri: sconosciuti"
+
+#: HddInfo.py:87
+msgid "Device Details"
+msgstr "Dettagli dispositivo"
+
+#: HddMount.py:196
+msgid ""
+"Device Fixed Mount Point change needs a system restart in order to take "
+"effect.\n"
+"Restart your STB now?"
+msgstr ""
+"La modifica del punto di mount del dispositivo richiede un riavvio per "
+"essere effettiva.\n"
+"Riavviare ora il ricevitore?"
+
+#: HddSetup.py:116 plugin.py:33 plugin.py:40
+msgid "Device Manager"
+msgstr "Gestione dispositivi"
+
+#: plugin.py:41
+msgid "Device Manager - Fast Mounted Remove"
+msgstr "Gestione dispositivi - Rimozione rapida"
+
+#: HddInfo.py:142
+#, python-format
+msgid "Disk temperature: %s"
+msgstr "Temperatura disco: %s"
+
+#: HddInfo.py:75
+msgid "Disk temperature: unknown"
+msgstr "Temperatura disco: sconosciuta"
+
+#: HddPartitions.py:153
+msgid "Error checking disk. The disk may be damaged"
+msgstr "Errore verifica disco. Il disco potrebbe essere danneggiato!"
+
+#: HddPartitions.py:163
+msgid "Error formatting disk. The disk may be damaged"
+msgstr "Errore formattazione disco. Il disco potrebbe essere danneggiato!"
+
+#: HddInfo.py:66 HddMount.py:88 HddMount.py:263 HddPartitions.py:92
+#: HddSetup.py:98
+msgid "Exit"
+msgstr "Uscire"
+
+#: HddMount.py:274
+msgid "Fast Mounted Remove"
+msgstr "Rimozione rapida"
+
+#: HddMount.py:87
+msgid "Fast mount"
+msgstr "Rapida"
+
+#: HddMount.py:280
+msgid ""
+"Fast mounted Media unmounted.\n"
+"You can safely remove the Device now, if no further Partitions (displayed as "
+"P.x on Devicelist - where x >=2) are mounted on the same Device.\n"
+"Please unmount Fixed Mounted Devices with Device Manager Panel!"
+msgstr ""
+"Smontaggio unità rapida.\n"
+"Ora è possibile rimuovere il dispositivo in sicurezza, se non esistono "
+"ulteriori partizioni (mostrate come P.x sulla lista dispositivi - dove x "
+">=2) montate sullo stesso dispositivo.\n"
+"Smontare i dispositivi montati in modo permanente con il pannello Gestione "
+"dispositivi!"
+
+#: HddInfo.py:115
+#, python-format
+msgid "Firmware: %s"
+msgstr "Firmware: %s"
+
+#: HddInfo.py:69
+msgid "Firmware: unknown"
+msgstr "Firmware: sconosciuto"
+
+#: HddMount.py:86
+msgid "Fixed mount"
+msgstr "Permanente"
+
+#: HddSetup.py:142
+msgid ""
+"Fixed mounted first initialized Storage Device to /media/hdd. It needs a "
+"system restart in order to take effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Unità dati prima inizializzata a /media/hdd montata in modo permanente. E' "
+"necessario un riavvio per applicare le modifiche.\n"
+"Riavviare il ricevitore?"
+
+#: HddPartitions.py:112 HddPartitions.py:135
+msgid "Format"
+msgstr "Formattare"
+
+#: HddPartitions.py:205 HddPartitions.py:212 HddPartitions.py:218
+#: HddPartitions.py:224 HddSetup.py:202 HddSetup.py:212
+msgid "Format as"
+msgstr "Formattare come"
+
+#: HddPartitions.py:159
+msgid "Format terminated with success"
+msgstr "Formattazione completata con successo"
+
+#: plugin.py:40
+msgid "Format/Partition your Devices and manage Mountpoints"
+msgstr "Formattare/Partizionare i dispositivi e gestire i punti di mount"
+
+#: HddPartitions.py:173 HddPartitions.py:177 HddPartitions.py:181
+#: HddPartitions.py:185
+msgid "Formatting disk"
+msgstr "Formattazione disco..."
+
+#: HddPartitions.py:173 HddPartitions.py:177 HddPartitions.py:181
+#: HddPartitions.py:185
+#, python-format
+msgid "Formatting disk %s"
+msgstr "Formattazione disco %s..."
+
+#: HddSetup.py:173
+#, python-format
+msgid "Formatting partition %d"
+msgstr "Formattazione partizione %d..."
+
+#: HddSetup.py:239
+#, python-format
+msgid "Four partitions (25% - 25% - 25% - 25%)"
+msgstr "Quattro partizioni (25% - 25% - 25% - 25%)"
+
+#: HddInfo.py:62
+msgid "Harddisk standby after"
+msgstr "Disco rigido in sospensione dopo"
+
+#: HddInfo.py:121
+#, python-format
+msgid "Heads: %s (max) %s (current)"
+msgstr "Testine: %s (max) %s (attuali)"
+
+#: HddInfo.py:71
+msgid "Heads: unknown"
+msgstr "Testine: sconosciute"
+
+#: HddSetup.py:99
+msgid "Info"
+msgstr "Info"
+
+#: HddSetup.py:101 HddSetup.py:229
+msgid "Initialize"
+msgstr "Inizializzare"
+
+#: HddSetup.py:173 HddSetup.py:196
+msgid "Initialize disk"
+msgstr "Inizializzare disco"
+
+#: HddMount.py:131 HddMount.py:161
+msgid "Insert mount point:"
+msgstr "Inserire punto di mount:"
+
+#: HddMount.py:174
+msgid "Keep old drive"
+msgstr "Mantenere la vecchia unità"
+
+#: HddInfo.py:109
+#, python-format
+msgid "Model: %s"
+msgstr "Modello: %s"
+
+#: HddInfo.py:67
+msgid "Model: unknown"
+msgstr "Modello: sconosciuto"
+
+#: HddPartitions.py:120 HddPartitions.py:143
+msgid "Mount"
+msgstr "Montare"
+
+#: HddMount.py:71
+msgid "Mount as /media/hdd1"
+msgstr "Montare come /media/hdd1"
+
+#: HddMount.py:72
+msgid "Mount as /media/hdd2"
+msgstr "Montare come /media/hdd2"
+
+#: HddMount.py:73
+msgid "Mount as /media/hdd3"
+msgstr "Montare come /media/hdd3"
+
+#: HddMount.py:74
+msgid "Mount as /media/hdd4"
+msgstr "Montare come /media/hdd4"
+
+#: HddMount.py:75
+msgid "Mount as /media/hdd5"
+msgstr "Montare come /media/hdd5"
+
+#: HddMount.py:76
+msgid "Mount as /media/usb"
+msgstr "Montare come /media/usb"
+
+#: HddMount.py:77
+msgid "Mount as /media/usb1"
+msgstr "Montare come /media/usb1"
+
+#: HddMount.py:78
+msgid "Mount as /media/usb2"
+msgstr "Montare come /media/usb2"
+
+#: HddMount.py:79
+msgid "Mount as /media/usb3"
+msgstr "Montare come /media/usb3"
+
+#: HddMount.py:80
+msgid "Mount as /media/usb4"
+msgstr "Montare come /media/usb4"
+
+#: HddMount.py:81
+msgid "Mount as /media/usb5"
+msgstr "Montare come /media/usb5"
+
+#: HddMount.py:70
+msgid "Mount as main hdd"
+msgstr "Montare come HDD principale"
+
+#: HddMount.py:82
+msgid "Mount on custom path"
+msgstr "Montare su percorso personale"
+
+#: HddMount.py:172
+msgid "Mount point exist!"
+msgstr "Punto di mount esistente!"
+
+#: HddMount.py:101
+msgid "Mountpoints"
+msgstr "Punti di mount"
+
+#: HddSetup.py:223
+msgid "No - simple"
+msgstr "No (semplice)"
+
+#: HddSetup.py:235
+msgid "One partition"
+msgstr "Una partizione"
+
+#: HddSetup.py:234
+msgid "Or use standard 'Harddisk Setup' to initialize your drive in ext4."
+msgstr "Oppure usare il menu 'Disco rigido' per inizializzare l'unità in ext4."
+
+#: HddPartitions.py:241
+#, python-format
+msgid "P. %d - %s (Fast: %s)"
+msgstr "P. %d - %s (Rapida: %s)"
+
+#: HddPartitions.py:239
+#, python-format
+msgid "P. %d - %s (Fixed: %s)"
+msgstr "P. %d - %s (Permanente: %s)"
+
+#: HddMount.py:304
+#, python-format
+msgid "P.%s (Fast: %s)"
+msgstr "P.%s (Rapida: %s)"
+
+#: HddMount.py:301
+#, python-format
+msgid "P.%s (Fixed: %s)"
+msgstr "P.%s (Permanente: %s)"
+
+#: HddPartitions.py:205 HddPartitions.py:212 HddPartitions.py:218
+#: HddPartitions.py:224 HddSetup.py:202 HddSetup.py:212 HddSetup.py:234
+msgid "Partitioner"
+msgstr "Gestore partizioni"
+
+#: HddSetup.py:181
+msgid "Partitioning failed!"
+msgstr "Partizionamento fallito!"
+
+#: HddSetup.py:196
+msgid "Partitioning..."
+msgstr "Partizionamento..."
+
+#: HddPartitions.py:123 HddSetup.py:104
+msgid "Partitions"
+msgstr "Partizioni"
+
+#: HddSetup.py:234
+msgid "Please select your preferred configuration."
+msgstr "Selezionare la configurazione preferita."
+
+#: plugin.py:41
+msgid "Quick and safe remove for your mounted devices "
+msgstr "Rimozione rapida e sicura dei dispositivi montati"
+
+#: HddInfo.py:136
+#, python-format
+msgid "Read cache speed: %s"
+msgstr "Velocità lettura cache: %s"
+
+#: HddInfo.py:74
+msgid "Read disk cache speed: unknown"
+msgstr "Velocità lettura cache disco: sconosciuta"
+
+#: HddInfo.py:73
+msgid "Read disk speed: unknown"
+msgstr "Velocità lettura disco: sconosciuta"
+
+#: HddInfo.py:130
+#, python-format
+msgid "Read speed: %s"
+msgstr "Velocità lettura: %s"
+
+#: HddMount.py:198 HddSetup.py:144
+msgid "Restart STB"
+msgstr "Riavviare"
+
+#: HddInfo.py:63
+msgid "Save"
+msgstr "Salvare"
+
+#: HddInfo.py:124
+#, python-format
+msgid "Sectors: %s (max) %s (current)"
+msgstr "Settori: %s (max) %s (attuali)"
+
+#: HddInfo.py:72
+msgid "Sectors: unknown"
+msgstr "Settori: sconosciuti"
+
+#: HddMount.py:172
+msgid "Selected mount point is already used by another drive."
+msgstr "Il punto di mount selezionato è già utilizzato da un'altra unità."
+
+#: HddInfo.py:112
+#, python-format
+msgid "Serial: %s"
+msgstr "Seriale: %s"
+
+#: HddInfo.py:68
+msgid "Serial: unknown"
+msgstr "Seriale: sconosciuto"
+
+#: HddSetup.py:238
+msgid "Three partitions (33% - 33% - 33%)"
+msgstr "Tre partizioni (33% - 33% - 33%)"
+
+#: HddSetup.py:236
+#, python-format
+msgid "Two partitions (50% - 50%)"
+msgstr "Due partizioni (50% - 50%)"
+
+#: HddSetup.py:237
+#, python-format
+msgid "Two partitions (75% - 25%)"
+msgstr "Due partizioni (75% - 25%)"
+
+#: HddMount.py:262 HddPartitions.py:117 HddPartitions.py:140
+msgid "Unmount"
+msgstr "Smontare"
+
+#: HddSetup.py:223
+msgid "Yes - fstab entry as /media/hdd"
+msgstr "Sì (voce fstab come /media/hdd)"
+
+#: HddSetup.py:252
+msgid "You need to initialize your storage device first"
+msgstr "Prima è necessario inizializzare l'unità dati"
