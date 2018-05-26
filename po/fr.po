@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-25 17:33+0200\n"
+"PO-Revision-Date: 2018-05-25 18:10+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+msgid " as HDD ?"
+msgstr " en tant que disque dur?"
+
+msgid "/media/custom"
+msgstr "/media/custom"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid ""
+"Cannot format current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossible de formater le disque actuel.\n"
+"Un enregistrement, une pause direct ou des outils externes (comme samba, "
+"fichier swap et nfsd) peuvent causer ce problème.\n"
+"Merci d’arrêter ces actions/applications et essayer de nouveau"
+
+#, python-format
+msgid "Cannot format partition %d"
+msgstr "Impossible de formater la partition %d"
+
+msgid ""
+"Cannot mount new drive.\n"
+"Please check filesystem or format it and try again"
+msgstr ""
+"Impossible de monter un nouveau disque.\n"
+"Vérifiez le système de fichier ou formatez le et essayez à nouveau"
+
+msgid ""
+"Cannot umount current device.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossible de démonter le périphérique actuel.\n"
+"Un enregistrement, une pause direct ou des outils externes (comme samba, "
+"fichier swap et nfsd) peuvent causer ce problème.\n"
+"Merci d’arrêter ces actions/applications et essayer de nouveau"
+
+msgid ""
+"Cannot umount current drive.\n"
+"A record in progress, timeshift or some external tools (like samba, swapfile "
+"and nfsd) may cause this problem.\n"
+"Please stop this actions/applications and try again"
+msgstr ""
+"Impossible de démonter le disque actuel.\n"
+"Un enregistrement, une pause direct ou des outils externes (comme samba, "
+"fichier swap et nfsd) peuvent causer ce problème.\n"
+"Merci d’arrêter ces actions/applications et essayer de nouveau"
+
+msgid "Change old drive with this new drive"
+msgstr "Remplacer un ancien disque par un nouveau"
+
+msgid "Check"
+msgstr "Vérification"
+
+msgid "Check disk terminated with success"
+msgstr "Vérification du disque terminée avec succès"
+
+msgid "Checking disk"
+msgstr "Vérification du disque"
+
+#, python-format
+msgid "Checking disk %s"
+msgstr "Vérification du disque %s"
+
+#, python-format
+msgid "Cylinders: %s (max) %s (current)"
+msgstr "Cylindres: %s (max) %s (actuellement)"
+
+msgid "Cylinders: unknown"
+msgstr "Cylindres: inconnu"
+
+msgid "Device Details"
+msgstr "Infos sur le périphérique"
+
+msgid ""
+"Device Fixed Mount Point change needs a system restart in order to take "
+"effect.\n"
+"Restart your STB now?"
+msgstr ""
+"La modification du point de montage fixé d’un périphérique nécessite un "
+"redémarrage afin de prendre effet.\n"
+"Redémarrer le récepteur maintenant?"
+
+msgid "Device Manager"
+msgstr "Gestionnaire de périphériques"
+
+msgid "Device Manager - Fast Mounted Remove"
+msgstr "Gestionnaire de montage - Enlever rapidement les montages"
+
+#, python-format
+msgid "Disk temperature: %s"
+msgstr "Température du disque: %s"
+
+msgid "Disk temperature: unknown"
+msgstr "Température du disque: inconnue"
+
+msgid "Error checking disk. The disk may be damaged"
+msgstr ""
+"Erreur lors de la vérification du disque. Le disque est peut-être endommagé"
+
+msgid "Error formatting disk. The disk may be damaged"
+msgstr "Erreur lors du formatage du disque. Le disque est peut-être endommagé"
+
+msgid "Exit"
+msgstr "Quitter"
+
+msgid "Fast Mounted Remove"
+msgstr "Enlever rapidement un montage"
+
+msgid "Fast mount"
+msgstr "Montage rapide"
+
+msgid ""
+"Fast mounted Media unmounted.\n"
+"You can safely remove the Device now, if no further Partitions (displayed as "
+"P.x on Devicelist - where x >=2) are mounted on the same Device.\n"
+"Please unmount Fixed Mounted Devices with Device Manager Panel!"
+msgstr ""
+"Le média monté rapidement à été démonté.\n"
+"Vous pouvez maintenant enlever en toute sécurité le périphérique, si plus "
+"aucune partitions (affichée comme P.x dans la liste des périphériques - où x "
+">=2) sont montés sur le même périphérique.\n"
+"Merci de démonter les points de montages fixés avec le menu de gestionnaire "
+"de périphérique!"
+
+#, python-format
+msgid "Firmware: %s"
+msgstr "Firmware: %s"
+
+msgid "Firmware: unknown"
+msgstr "Firmware: inconnu"
+
+msgid "Fixed mount"
+msgstr "Montage fixé"
+
+msgid ""
+"Fixed mounted first initialized Storage Device to /media/hdd. It needs a "
+"system restart in order to take effect.\n"
+"Restart your STB now?"
+msgstr ""
+"Montage fixé initialise d’abord le périphérique de stockage en tant que /"
+"media/hdd. Cela nécessite un redémarrage pour prendre effet.\n"
+"Redémarrer votre récepteur maintenant?"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Format as"
+msgstr "Formater en tant que"
+
+msgid "Format terminated with success"
+msgstr "Le formatage est terminé avec succès"
+
+msgid "Format/Partition your Devices and manage Mountpoints"
+msgstr "Formatage/Partition vos périphériques et gérer les points de montage"
+
+msgid "Formatting disk"
+msgstr "Formatage du disque"
+
+#, python-format
+msgid "Formatting disk %s"
+msgstr "Formatage du disque %s"
+
+#, python-format
+msgid "Formatting partition %d"
+msgstr "Formatage de la partition %d"
+
+#, python-format
+msgid "Four partitions (25% - 25% - 25% - 25%)"
+msgstr "Quatre partitions (25% - 25% - 25% - 25%)"
+
+msgid "Harddisk standby after"
+msgstr "Mettre le disque dur en veille après"
+
+#, python-format
+msgid "Heads: %s (max) %s (current)"
+msgstr "Têtes: %s (max) %s (actuellement)"
+
+msgid "Heads: unknown"
+msgstr "Têtes: inconnues"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Initialize"
+msgstr "Initialiser"
+
+msgid "Initialize disk"
+msgstr "Initialisation du disque"
+
+msgid "Insert mount point:"
+msgstr "Insérer un point de montage:"
+
+msgid "Keep old drive"
+msgstr "Garder l’ancien disque"
+
+#, python-format
+msgid "Model: %s"
+msgstr "Modèle: %s"
+
+msgid "Model: unknown"
+msgstr "Modèle: inconnu"
+
+msgid "Mount"
+msgstr "Monter"
+
+msgid "Mount as /media/hdd1"
+msgstr "Monter en tant que /media/hdd1"
+
+msgid "Mount as /media/hdd2"
+msgstr "Monter en tant que /media/hdd2"
+
+msgid "Mount as /media/hdd3"
+msgstr "Monter en tant que /media/hdd3"
+
+msgid "Mount as /media/hdd4"
+msgstr "Monter en tant que /media/hdd4"
+
+msgid "Mount as /media/hdd5"
+msgstr "Monter en tant que /media/hdd5"
+
+msgid "Mount as /media/usb"
+msgstr "Monter en tant que /media/usb"
+
+msgid "Mount as /media/usb1"
+msgstr "Monter en tant que /media/usb1"
+
+msgid "Mount as /media/usb2"
+msgstr "Monter en tant que /media/usb2"
+
+msgid "Mount as /media/usb3"
+msgstr "Monter en tant que /media/usb3"
+
+msgid "Mount as /media/usb4"
+msgstr "Monter en tant que /media/usb4"
+
+msgid "Mount as /media/usb5"
+msgstr "Monter en tant que /media/usb5"
+
+msgid "Mount as main hdd"
+msgstr "Monter en tant que disque dur principal"
+
+msgid "Mount on custom path"
+msgstr "Monter sur une chemin personalisé"
+
+msgid "Mount point exist!"
+msgstr "Le point de montage existe!"
+
+msgid "Mountpoints"
+msgstr "Points de montage"
+
+msgid "No - simple"
+msgstr "Non - simple"
+
+msgid "One partition"
+msgstr "Une partition"
+
+msgid "Or use standard 'Harddisk Setup' to initialize your drive in ext4."
+msgstr ""
+"Ou utiliser le standard ‘Configuration Disque Dur’ pour initialiser votre "
+"disque en ext4."
+
+#, python-format
+msgid "P. %d - %s (Fast: %s)"
+msgstr "P. %d - %s (Rapide: %s)"
+
+#, python-format
+msgid "P. %d - %s (Fixed: %s)"
+msgstr "P. %d - %s (Fixé: %s)"
+
+#, python-format
+msgid "P.%s (Fast: %s)"
+msgstr "P.%s (Rapide: %s)"
+
+#, python-format
+msgid "P.%s (Fixed: %s)"
+msgstr "P.%s (Fixé: %s)"
+
+msgid "Partitioner"
+msgstr "Partitionner"
+
+msgid "Partitioning failed!"
+msgstr "Le partitionnage a échoué!"
+
+msgid "Partitioning..."
+msgstr "Partitionnage…"
+
+msgid "Partitions"
+msgstr "Partitions"
+
+msgid "Please select your preferred configuration."
+msgstr "Merci de choisir votre configuration préférée."
+
+msgid "Quick and safe remove for your mounted devices "
+msgstr "Enlever rapidement et en toute sécurité vos périphériques montés "
+
+#, python-format
+msgid "Read cache speed: %s"
+msgstr "Vitesse de lecture du cache: %s"
+
+msgid "Read disk cache speed: unknown"
+msgstr "Vitesse de lecture du cache: inconnue"
+
+msgid "Read disk speed: unknown"
+msgstr "Vitesse de lecture du disque: inconnue"
+
+#, python-format
+msgid "Read speed: %s"
+msgstr "Vitesse de lecture: %s"
+
+msgid "Restart STB"
+msgstr "Redémarrer le récepteur"
+
+msgid "Save"
+msgstr "Sauver"
+
+#, python-format
+msgid "Sectors: %s (max) %s (current)"
+msgstr "Secteurs: %s (max) %s (actuellement)"
+
+msgid "Sectors: unknown"
+msgstr "Secteurs: inconnu"
+
+msgid "Selected mount point is already used by another drive."
+msgstr ""
+"Le point de montage sélectionné est déjà utilisé par un autre périphérique."
+
+#, python-format
+msgid "Serial: %s"
+msgstr "Série: %s"
+
+msgid "Serial: unknown"
+msgstr "Série: inconnu"
+
+msgid "Three partitions (33% - 33% - 33%)"
+msgstr "Trois partitions (33% - 33% - 33%)"
+
+#, python-format
+msgid "Two partitions (50% - 50%)"
+msgstr "Deux partitions (50% - 50%)"
+
+#, python-format
+msgid "Two partitions (75% - 25%)"
+msgstr "Deux partitions (75% - 25%)"
+
+msgid "Unmount"
+msgstr "Démonter"
+
+msgid "Yes - fstab entry as /media/hdd"
+msgstr "Oui - entrée fstab en tant que /media/hdd"
+
+msgid "You need to initialize your storage device first"
+msgstr "Vous devez d’abord initialiser votre périphérique de stockage"
