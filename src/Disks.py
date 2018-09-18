@@ -1,58 +1,75 @@
 
 import os
 import re
-from Tools.HardwareInfo import HardwareInfo
-try:
-	device_name = HardwareInfo().get_device_name()
-except:
-	device_name = None
+from Tools.Directories import fileExists
 
 #sfdisk_version_bug = '2.28.1' in os.popen('/usr/sbin/sfdisk -v').read()
 
 BOX_NAME = "none"
-MODEL_NAME = "none"
-if os.path.exists("/proc/stb/info/boxtype"):
-	BOX_NAME = "all"
+BOX_MODEL = "none"
+if fileExists("/proc/stb/info/vumodel") and fileExists("/etc/init.d/vuplus-platform-util") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/boxtype"):
 	try:
-		f = open("/proc/stb/info/boxtype")
-		MODEL_NAME = f.read().strip()
-		f.close()
+		l = open("/proc/stb/info/vumodel")
+		model = l.read()
+		BOX_NAME = str(model.lower().strip())
+		l.close()
+		BOX_MODEL = "vuplus"
 	except:
 		pass
-elif os.path.exists("/proc/stb/info/hwmodel"):
-	BOX_NAME = "all"
+elif fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/hwmodel"):
 	try:
-		f = open("/proc/stb/info/hwmodel")
-		MODEL_NAME = f.read().strip()
-		f.close()
+		l = open("/proc/stb/info/boxtype")
+		model = l.read()
+		BOX_NAME = str(model.lower().strip())
+		l.close()
+		if BOX_NAME.startswith('et'):
+			BOX_MODEL = "xtrend"
+			if BOX_NAME.startswith('et7') and BOX_NAME.endswith('mini'):
+				BOX_MODEL = "ultramini"
+		elif BOX_NAME.startswith('xpeed'):
+			BOX_MODEL = "ultramini"
+		elif BOX_NAME.startswith('xp'):
+			BOX_MODEL = "xp"
+		elif BOX_NAME.startswith('spycat'):
+			BOX_MODEL = "spycat"
+		elif BOX_NAME.startswith('formuler'):
+			BOX_MODEL = "formuler"
+		elif BOX_NAME.startswith('hd'):
+			BOX_MODEL = "gfutures"
+		elif BOX_NAME.startswith('vs'):
+			BOX_MODEL = "gfutures"
+		elif BOX_NAME.startswith('bre2ze4k'):
+			BOX_MODEL = "gfutures"
+		elif BOX_NAME.startswith('osm'):
+			BOX_MODEL = "xcore"
+		elif BOX_NAME.startswith('g300') or BOX_NAME.startswith('7000S'):
+			BOX_MODEL = "ini"
+		elif BOX_NAME == 'sh1' or BOX_NAME == 'h3' or BOX_NAME == 'h4' or BOX_NAME == 'h5' or BOX_NAME == 'lc' or BOX_NAME == 'i55' or BOX_NAME == 'h7':
+			BOX_MODEL = "airdigital"
 	except:
 		pass
-elif os.path.exists("/proc/stb/info/vumodel"):
-	BOX_NAME = "vu"
+elif fileExists("/proc/stb/info/hwmodel"):
 	try:
-		f = open("/proc/stb/info/vumodel")
-		MODEL_NAME = f.read().strip()
-		f.close()
+		l = open("/proc/stb/info/hwmodel")
+		model = l.read()
+		BOX_NAME = str(model.lower().strip())
+		l.close()
 	except:
 		pass
-elif device_name and device_name.startswith('dm') and os.path.exists("/proc/stb/info/model"):
-	BOX_NAME = "dmm"
+	if BOX_NAME.startswith('fusion') or BOX_NAME.startswith("purehd"):
+		BOX_MODEL = "xsarius"
+elif fileExists("/proc/stb/info/model") and not fileExists("/proc/stb/info/hwmodel"):
 	try:
-		f = open("/proc/stb/info/model")
-		MODEL_NAME = f.read().strip()
-		f.close()
-	except:
-		pass
-elif os.path.exists("/proc/stb/info/gbmodel"):
-	BOX_NAME = "all"
-	try:
-		f = open("/proc/stb/info/gbmodel")
-		MODEL_NAME = f.read().strip()
-		f.close()
+		l = open("/proc/stb/info/model")
+		model = l.read()
+		BOX_NAME = str(model.lower().strip())
+		l.close()
+		if BOX_NAME.startswith('dm'):
+			BOX_MODEL = "dreambox"
 	except:
 		pass
 
-arm_box = MODEL_NAME in ('sf5008','et13000','et1x000','uno4k', 'ultimo4k', 'solo4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gb7252', 'dags7252', 'vs1500','h7','8100s')
+arm_box = BOX_NAME in ('5008', 'et13000', 'et11000',' et1x000', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gb7252', 'lunix3-4k', 'vs1500', 'h7', '8100s')
 
 class Disks:
 	ptypes = {'0': 'Empty',
