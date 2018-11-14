@@ -7,7 +7,7 @@ from Tools.Directories import fileExists
 
 BOX_NAME = "none"
 BOX_MODEL = "none"
-if fileExists("/proc/stb/info/vumodel") and fileExists("/etc/init.d/vuplus-platform-util") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/boxtype"):
+if fileExists("/proc/stb/info/vumodel") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/boxtype"):
 	try:
 		l = open("/proc/stb/info/vumodel")
 		model = l.read()
