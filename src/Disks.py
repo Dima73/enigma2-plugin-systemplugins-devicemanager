@@ -5,9 +5,9 @@ from Tools.Directories import fileExists
 
 #sfdisk_version_bug = '2.28.1' in os.popen('/usr/sbin/sfdisk -v').read()
 
-BOX_NAME = "none"
-BOX_MODEL = "none"
-if fileExists("/proc/stb/info/vumodel") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/boxtype"):
+BOX_MODEL = ""
+BOX_NAME = ""
+if fileExists("/proc/stb/info/vumodel") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/gbmodel"):
 	try:
 		l = open("/proc/stb/info/vumodel")
 		model = l.read()
@@ -16,7 +16,7 @@ if fileExists("/proc/stb/info/vumodel") and not fileExists("/proc/stb/info/hwmod
 		BOX_MODEL = "vuplus"
 	except:
 		pass
-elif fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/hwmodel"):
+elif fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/gbmodel"):
 	try:
 		l = open("/proc/stb/info/boxtype")
 		model = l.read()
@@ -38,7 +38,7 @@ elif fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/hwm
 			BOX_MODEL = "gfutures"
 		elif BOX_NAME.startswith('vs'):
 			BOX_MODEL = "gfutures"
-		elif BOX_NAME.startswith('bre2ze4k'):
+		elif BOX_NAME.startswith('e4hd'):
 			BOX_MODEL = "gfutures"
 		elif BOX_NAME.startswith('osm'):
 			BOX_MODEL = "xcore"
@@ -48,17 +48,18 @@ elif fileExists("/proc/stb/info/boxtype") and not fileExists("/proc/stb/info/hwm
 			BOX_MODEL = "airdigital"
 	except:
 		pass
-elif fileExists("/proc/stb/info/hwmodel"):
+elif fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/gbmodel"):
 	try:
 		l = open("/proc/stb/info/hwmodel")
 		model = l.read()
 		BOX_NAME = str(model.lower().strip())
 		l.close()
+		BOX_MODEL = "qviart"
 	except:
 		pass
 	if BOX_NAME.startswith('fusion') or BOX_NAME.startswith("purehd"):
 		BOX_MODEL = "xsarius"
-elif fileExists("/proc/stb/info/model") and not fileExists("/proc/stb/info/hwmodel"):
+elif fileExists("/proc/stb/info/model") and not fileExists("/proc/stb/info/hwmodel") and not fileExists("/proc/stb/info/gbmodel"):
 	try:
 		l = open("/proc/stb/info/model")
 		model = l.read()
@@ -68,8 +69,18 @@ elif fileExists("/proc/stb/info/model") and not fileExists("/proc/stb/info/hwmod
 			BOX_MODEL = "dreambox"
 	except:
 		pass
+elif fileExists("/proc/stb/info/gbmodel") and not fileExists("/proc/stb/info/hwmodel"):
+	try:
+		l = open("/proc/stb/info/gbmodel")
+		model = l.read()
+		BOX_NAME = str(model.lower().strip())
+		l.close()
+		if BOX_NAME.startswith('gb'):
+			BOX_MODEL = "gigablue"
+	except:
+		pass
 
-arm_box = BOX_NAME in ('5008', 'et13000', 'et11000',' et1x000', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gb7252', 'lunix3-4k', 'vs1500', 'h7', '8100s')
+arm_box = BOX_NAME in ('5008', 'et13000', 'et11000','et1x000', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', "gbue4k", 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd')
 
 class Disks:
 	ptypes = {'0': 'Empty',
