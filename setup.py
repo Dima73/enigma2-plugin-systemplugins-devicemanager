@@ -2,8 +2,7 @@ from distutils.core import setup
 import setup_translate
 
 
-setup(name = 'enigma2-plugin-systemplugins-devicemanager
-',
+setup(name = 'enigma2-plugin-systemplugins-devicemanager',
 		version='1.2',
 		author='Dimitrij openPLi',
 		author_email='dima-73@inbox.lv',
