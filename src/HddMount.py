@@ -128,7 +128,7 @@ class HddMountDevice(Screen):
 		elif selected == 11:
 			self.setMountPoint("/media/usb5")
 		elif selected == 12:
-			self.session.openWithCallback(self.customPath, VirtualKeyBoard, title = (_("Insert mount point:")), text = _("/media/custom"))
+			self.session.openWithCallback(self.customPath, VirtualKeyBoard, title=(_("Insert mount point:")), text=_("/media/custom"))
 
 	def green(self):
 		self.fast = True
@@ -158,7 +158,7 @@ class HddMountDevice(Screen):
 		elif selected == 11:
 			self.setMountPoint("/media/usb5")
 		elif selected == 12:
-			self.session.openWithCallback(self.customPath, VirtualKeyBoard, title = (_("Insert mount point:")), text = _("/media/custom"))
+			self.session.openWithCallback(self.customPath, VirtualKeyBoard, title=(_("Insert mount point:")), text=_("/media/custom"))
 
 	def customPath(self, result):
 		if result and len(result) > 0:
@@ -209,7 +209,7 @@ class HddMountDevice(Screen):
 		self.close()
 
 def MountEntry(description, details):
-	picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
+	picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
 	return (picture, description, details)
 
 class HddFastRemove(Screen):

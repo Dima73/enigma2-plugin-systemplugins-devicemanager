@@ -24,7 +24,7 @@ if getDesktop(0).size().width() >= 1920:
 sfdisk = os.path.exists('/usr/sbin/sfdisk')
 
 def PartitionEntry(description, size):
-	picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/partitionmanager.png"))
+	picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/partitionmanager.png"))
 
 	return (picture, description, size)
 

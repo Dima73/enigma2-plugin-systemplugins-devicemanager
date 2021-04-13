@@ -28,11 +28,11 @@ sfdisk = os.path.exists('/usr/sbin/sfdisk')
 
 def DiskEntry(model, size, removable, rotational, internal):
 	if not removable and internal and rotational:
-		picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/disk.png"))
+		picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/disk.png"))
 	elif internal and not rotational:
-		picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/ssddisk.png"))
+		picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/ssddisk.png"))
 	else:
-		picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
+		picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
 	return (picture, model, size)
 
 class HddSetup(Screen):
@@ -226,7 +226,7 @@ class HddSetup(Screen):
 					if ret[1] == "as_hdd":
 						self.asHDD = True
 					self.yellowAswer()
-			self.session.openWithCallback(extraOption, ChoiceBox, title = _("Initialize") + _(" as HDD ?"),list = list)
+			self.session.openWithCallback(extraOption, ChoiceBox, title=_("Initialize") + _(" as HDD ?"),list=list)
 
 	def yellowAswer(self):
 		if sfdisk and len(self.mdisks.disks) > 0:
