@@ -226,7 +226,7 @@ class HddSetup(Screen):
 					if ret[1] == "as_hdd":
 						self.asHDD = True
 					self.yellowAswer()
-			self.session.openWithCallback(extraOption, ChoiceBox, title=_("Initialize") + _(" as HDD ?"),list=list)
+			self.session.openWithCallback(extraOption, ChoiceBox, title=_("Initialize") + _(" as HDD ?"), list=list)
 
 	def yellowAswer(self):
 		if sfdisk and len(self.mdisks.disks) > 0:
