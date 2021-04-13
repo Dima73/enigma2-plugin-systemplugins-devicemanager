@@ -236,7 +236,7 @@ class Disks:
 		internal = False
 		try:
 			phys_path = os.path.realpath(self.sysfsPath('device', device))
-			internal =  "pci" in phys_path or "ahci" in phys_path or "sata" in phys_path
+			internal = "pci" in phys_path or "ahci" in phys_path or "sata" in phys_path
 		except:
 			pass
 		return internal
