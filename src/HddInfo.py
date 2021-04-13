@@ -14,6 +14,7 @@ FULLHD = False
 if getDesktop(0).size().width() >= 1920:
 	FULLHD = True
 
+
 class HddInfo(ConfigListScreen, Screen):
 	if FULLHD:
 		skin = """

@@ -8,6 +8,7 @@ FULLHD = False
 if getDesktop(0).size().width() >= 1920:
 	FULLHD = True
 
+
 class ExtraActionBox(Screen):
 	if FULLHD:
 		skin = """
@@ -21,6 +22,7 @@ class ExtraActionBox(Screen):
 			<widget alphatest="on" name="logo" position="10,10" size="48,48" transparent="1" zPosition="2"/>
 			<widget font="Regular;20" halign="center" name="message" position="10,10" size="538,48" valign="center" />
 		</screen>"""
+
 	def __init__(self, session, message, title, action):
 		Screen.__init__(self, session)
 		self.session = session

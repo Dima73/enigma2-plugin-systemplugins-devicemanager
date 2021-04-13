@@ -26,6 +26,7 @@ if getDesktop(0).size().width() >= 1920:
 
 sfdisk = os.path.exists('/usr/sbin/sfdisk')
 
+
 def DiskEntry(model, size, removable, rotational, internal):
 	if not removable and internal and rotational:
 		picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/disk.png"))
@@ -34,6 +35,7 @@ def DiskEntry(model, size, removable, rotational, internal):
 	else:
 		picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
 	return (picture, model, size)
+
 
 class HddSetup(Screen):
 	if FULLHD:
@@ -217,10 +219,12 @@ class HddSetup(Screen):
 											["Fat32", "partitionmanager.png"],
 											[_("Cancel"), "cancel.png"],
 											], 1, 5)
+
 	def yellow(self):
 		self.asHDD = False
 		if sfdisk and len(self.mdisks.disks) > 0:
 			list = [(_("No - simple"), "simple"), (_("Yes - fstab entry as /media/hdd"), "as_hdd")]
+
 			def extraOption(ret):
 				if ret:
 					if ret[1] == "as_hdd":

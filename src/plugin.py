@@ -6,6 +6,7 @@ from HddMount import HddFastRemove
 from Plugins.Plugin import PluginDescriptor
 import os
 
+
 def supportExtFat():
 	if not os.path.isfile("/sbin/mkexfatfs"):
 		arch = os.popen("uname -m").read()
@@ -20,14 +21,17 @@ def supportExtFat():
 	else:
 		os.system("echo exfat-fuse >> /etc/filesystems && opkg update && opkg install fuse-exfat")
 
+
 def deviceManagerMain(session, **kwargs):
 	supportExtFat()
 	session.open(HddSetup)
+
 
 def deviceManagerSetup(menuid, **kwargs):
 	if menuid != "system":
 		return []
 	return [(_("Device Manager"), deviceManagerMain, "device_manager", None)]
+
 
 def deviceManagerFastRemove(session, **kwargs):
 	session.open(HddFastRemove)

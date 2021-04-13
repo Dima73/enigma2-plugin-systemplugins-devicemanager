@@ -82,6 +82,7 @@ elif fileExists("/proc/stb/info/gbmodel") and not fileExists("/proc/stb/info/hwm
 
 arm_box = BOX_NAME in ('sf8008', 'sf5008', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'h9combo', 'h10', 'v8plus', 'hd60', 'hd61')
 
+
 class Disks:
 	ptypes = {'0': 'Empty',
 		'24': 'NEC DOS',
