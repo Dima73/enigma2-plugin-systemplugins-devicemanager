@@ -200,22 +200,22 @@ class HddSetup(Screen):
 			self.result = result
 			if self.isExt4Supported():
 				self.session.openWithCallback(self.initialaze, ExtraMessageBox, _("Format as"), _("Partitioner"),
-											[ [ "Ext4", "partitionmanager.png" ],
-											[ "Ext3", "partitionmanager.png" ],
-											[ "Ext2", "partitionmanager.png" ],
-											[ "NTFS", "partitionmanager.png" ],
-											[ "exFAT", "partitionmanager.png" ],
-											[ "Fat32", "partitionmanager.png" ],
-											[ _("Cancel"), "cancel.png" ],
+											[["Ext4", "partitionmanager.png"],
+											["Ext3", "partitionmanager.png"],
+											["Ext2", "partitionmanager.png"],
+											["NTFS", "partitionmanager.png"],
+											["exFAT", "partitionmanager.png"],
+											["Fat32", "partitionmanager.png"],
+											[_("Cancel"), "cancel.png"],
 											], 1, 6)
 			else:
 				self.session.openWithCallback(self.initialaze, ExtraMessageBox, _("Format as"), _("Partitioner"),
-											[ [ "Ext3", "partitionmanager.png" ],
-											[ "Ext2", "partitionmanager.png" ],
-											[ "NTFS", "partitionmanager.png" ],
-											[ "exFAT", "partitionmanager.png" ],
-											[ "Fat32", "partitionmanager.png" ],
-											[ _("Cancel"), "cancel.png" ],
+											[["Ext3", "partitionmanager.png"],
+											["Ext2", "partitionmanager.png"],
+											["NTFS", "partitionmanager.png"],
+											["exFAT", "partitionmanager.png"],
+											["Fat32", "partitionmanager.png"],
+											[_("Cancel"), "cancel.png"],
 											], 1, 5)
 	def yellow(self):
 		self.asHDD = False
@@ -232,12 +232,12 @@ class HddSetup(Screen):
 		if sfdisk and len(self.mdisks.disks) > 0:
 			self.sindex = self['menu'].getIndex()
 			self.session.openWithCallback(self.chooseFSType, ExtraMessageBox, _("Please select your preferred configuration.") + "\n" + _("Or use standard 'Harddisk Setup' to initialize your drive in ext4."), _("Partitioner"),
-										[ [ _("One partition"), "partitionmanager.png" ],
-										[ _("Two partitions (50% - 50%)"), "partitionmanager.png" ],
-										[ _("Two partitions (75% - 25%)"), "partitionmanager.png" ],
-										[ _("Three partitions (33% - 33% - 33%)"), "partitionmanager.png" ],
-										[ _("Four partitions (25% - 25% - 25% - 25%)"), "partitionmanager.png" ],
-										[ _("Cancel"), "cancel.png" ],
+										[[_("One partition"), "partitionmanager.png"],
+										[_("Two partitions (50% - 50%)"), "partitionmanager.png"],
+										[_("Two partitions (75% - 25%)"), "partitionmanager.png"],
+										[_("Three partitions (33% - 33% - 33%)"), "partitionmanager.png"],
+										[_("Four partitions (25% - 25% - 25% - 25%)"), "partitionmanager.png"],
+										[_("Cancel"), "cancel.png"],
 										], 1, 5)
 
 	def green(self):
