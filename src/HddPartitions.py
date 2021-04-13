@@ -128,12 +128,12 @@ class HddPartitions(Screen):
 		self["key_green"].setText("")
 		self["key_yellow"].setText("")
 		self["key_blue"].setText("")
-		
+
 		if len(self.disk[5]) > 0:
 			index = self["menu"].getIndex()
 			if self.disk[5][index][3] == "83" or self.disk[5][index][3] == "7" or self.disk[5][index][3] == "b" or self.disk[5][index][3] == "c":
 				self["key_blue"].setText(_("Check"))
-				if sfdisk: 
+				if sfdisk:
 					self["key_yellow"].setText(_("Format"))
 				mp = self.mountpoints.get(self.disk[0], index + 1)
 				rmp = self.mountpoints.getRealMount(self.disk[0], index + 1)

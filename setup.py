@@ -12,4 +12,3 @@ setup(name='enigma2-plugin-systemplugins-devicemanager',
 		description='Device manager for storage devices (format/change partitions and type/fast & fixed mount and umount) ',
 		cmdclass=setup_translate.cmdclass,
 	)
-
