@@ -209,7 +209,7 @@ class HddMountDevice(Screen):
 		self.close()
 
 def MountEntry(description, details):
-	picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"));
+	picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/diskusb.png"))
 	return (picture, description, details)
 
 class HddFastRemove(Screen):
