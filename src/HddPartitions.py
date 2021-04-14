@@ -23,10 +23,12 @@ if getDesktop(0).size().width() >= 1920:
 
 sfdisk = os.path.exists('/usr/sbin/sfdisk')
 
+
 def PartitionEntry(description, size):
-	picture = LoadPixmap(cached = True, path = resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/partitionmanager.png"))
+	picture = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_PLUGIN, "SystemPlugins/DeviceManager/icons/partitionmanager.png"))
 
 	return (picture, description, size)
+
 
 class HddPartitions(Screen):
 	if FULLHD:
@@ -126,15 +128,15 @@ class HddPartitions(Screen):
 		self["key_green"].setText("")
 		self["key_yellow"].setText("")
 		self["key_blue"].setText("")
-		
+
 		if len(self.disk[5]) > 0:
 			index = self["menu"].getIndex()
 			if self.disk[5][index][3] == "83" or self.disk[5][index][3] == "7" or self.disk[5][index][3] == "b" or self.disk[5][index][3] == "c":
 				self["key_blue"].setText(_("Check"))
-				if sfdisk: 
+				if sfdisk:
 					self["key_yellow"].setText(_("Format"))
-				mp = self.mountpoints.get(self.disk[0], index+1)
-				rmp = self.mountpoints.getRealMount(self.disk[0], index+1)
+				mp = self.mountpoints.get(self.disk[0], index + 1)
+				rmp = self.mountpoints.getRealMount(self.disk[0], index + 1)
 				if len(mp) > 0 or len(rmp) > 0:
 					self.mounted = True
 					self["key_blue"].setText(_("Unmount"))
@@ -144,7 +146,7 @@ class HddPartitions(Screen):
 
 	def chkfs(self):
 		disks = Disks()
-		ret = disks.chkfs(self.disk[5][self.index][0][:3], self.index+1, self.fstype)
+		ret = disks.chkfs(self.disk[5][self.index][0][:3], self.index + 1, self.fstype)
 		if ret == 0:
 			self.session.open(MessageBox, _("Check disk terminated with success"), MessageBox.TYPE_INFO)
 		elif ret == -1:
@@ -154,7 +156,7 @@ class HddPartitions(Screen):
 
 	def mkfs(self):
 		disks = Disks()
-		ret = disks.mkfs(self.disk[5][self.index][0][:3], self.index+1, self.fstype)
+		ret = disks.mkfs(self.disk[5][self.index][0][:3], self.index + 1, self.fstype)
 		if ret == 0:
 			self.session.open(MessageBox, _("Format terminated with success"), MessageBox.TYPE_INFO)
 		elif ret == -2:
@@ -203,27 +205,27 @@ class HddPartitions(Screen):
 			if self.disk[5][self.index][3] == "83":
 				if self.isExt4Supported():
 					self.session.openWithCallback(self.domkfs, ExtraMessageBox, _("Format as"), _("Partitioner"),
-												[ [ "Ext4", "partitionmanager.png" ],
-												[ "Ext3", "partitionmanager.png" ],
-												[ "Ext2", "partitionmanager.png" ],
-												[ _("Cancel"), "cancel.png" ],
+												[["Ext4", "partitionmanager.png"],
+												["Ext3", "partitionmanager.png"],
+												["Ext2", "partitionmanager.png"],
+												[_("Cancel"), "cancel.png"],
 												], 1, 3)
 				else:
 					self.session.openWithCallback(self.domkfs, ExtraMessageBox, _("Format as"), _("Partitioner"),
-												[ [ "Ext3", "partitionmanager.png" ],
-												[ "Ext2", "partitionmanager.png" ],
-												[ _("Cancel"), "cancel.png" ],
+												[["Ext3", "partitionmanager.png"],
+												["Ext2", "partitionmanager.png"],
+												[_("Cancel"), "cancel.png"],
 												], 1, 2)
 			elif self.disk[5][self.index][3] == "7":
 				self.session.openWithCallback(self.domkfs, ExtraMessageBox, _("Format as"), _("Partitioner"),
-											[ [ "NTFS", "partitionmanager.png" ],
-											[ "exFAT", "partitionmanager.png" ],
-											[ _("Cancel"), "cancel.png" ],
+											[["NTFS", "partitionmanager.png"],
+											["exFAT", "partitionmanager.png"],
+											[_("Cancel"), "cancel.png"],
 											], 1, 2)
 			elif self.disk[5][self.index][3] == "b" or self.disk[5][self.index][3] == "c":
 				self.session.openWithCallback(self.domkfs, ExtraMessageBox, _("Format as"), _("Partitioner"),
-											[ [ "Fat32", "partitionmanager.png" ],
-											[ _("Cancel"), "cancel.png" ],
+											[["Fat32", "partitionmanager.png"],
+											[_("Cancel"), "cancel.png"],
 											], 1, 1)
 
 	def refreshMP(self, uirefresh=True):
@@ -256,8 +258,8 @@ class HddPartitions(Screen):
 		if len(self.partitions) > 0:
 			self.sindex = self['menu'].getIndex()
 			if self.mounted:
-				mp = self.mountpoints.get(self.disk[0], self.sindex+1)
-				rmp = self.mountpoints.getRealMount(self.disk[0], self.sindex+1)
+				mp = self.mountpoints.get(self.disk[0], self.sindex + 1)
+				rmp = self.mountpoints.getRealMount(self.disk[0], self.sindex + 1)
 				if len(mp) > 0:
 					if self.mountpoints.isMounted(mp):
 						if self.mountpoints.umount(mp):
@@ -272,7 +274,7 @@ class HddPartitions(Screen):
 					self.mountpoints.umount(rmp)
 				self.refreshMP()
 			else:
-				self.session.openWithCallback(self.refreshMP, HddMountDevice, self.disk[0], self.sindex+1)
+				self.session.openWithCallback(self.refreshMP, HddMountDevice, self.disk[0], self.sindex + 1)
 
 	def quit(self):
 		self.close()

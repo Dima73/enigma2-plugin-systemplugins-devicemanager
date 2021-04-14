@@ -80,7 +80,8 @@ elif fileExists("/proc/stb/info/gbmodel") and not fileExists("/proc/stb/info/hwm
 	except:
 		pass
 
-arm_box = BOX_NAME in ('sf8008', 'sf5008', 'et13000', 'et11000','et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'h9combo', 'h10', 'v8plus', 'hd60', 'hd61')
+arm_box = BOX_NAME in ('sf8008', 'sf5008', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'h9combo', 'h10', 'v8plus', 'hd60', 'hd61')
+
 
 class Disks:
 	ptypes = {'0': 'Empty',
@@ -236,7 +237,7 @@ class Disks:
 		internal = False
 		try:
 			phys_path = os.path.realpath(self.sysfsPath('device', device))
-			internal =  "pci" in phys_path or "ahci" in phys_path or "sata" in phys_path
+			internal = "pci" in phys_path or "ahci" in phys_path or "sata" in phys_path
 		except:
 			pass
 		return internal
@@ -419,7 +420,7 @@ class Disks:
 		os.system("/sbin/mdev -s")
 		return 0
 
-	def chkfs(self, device, partition, fstype = 0):
+	def chkfs(self, device, partition, fstype=0):
 		fdevice = '%s%d' % (device, partition)
 		print '[DeviceManager] checking device %s' % fdevice
 		if self.isMountedP(device, partition):
@@ -449,7 +450,7 @@ class Disks:
 			return 0
 		return -2
 
-	def mkfs(self, device, partition, fstype = 0):
+	def mkfs(self, device, partition, fstype=0):
 		dev = "%s%d" % (device, partition)
 		size = 0
 		partitions = open("/proc/partitions")
