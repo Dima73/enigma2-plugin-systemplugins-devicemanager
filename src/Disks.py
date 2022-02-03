@@ -333,7 +333,7 @@ class Disks:
 			res = mnt.strip().split()
 			if res and len(res) > 1:
 				if res[0][:8] == "/dev/%s" % device:
-					print "[DeviceManager] umount %s" % res[0]
+					print("[DeviceManager] umount %s" % res[0])
 					if os.system("umount -f %s && sleep 2" % res[0]) != 0:
 						return False
 		mounts = open("/proc/mounts", 'r')
@@ -343,7 +343,7 @@ class Disks:
 			res = mnt.strip().split()
 			if res and len(res) > 1:
 				if res[0][:8] == "/dev/%s" % device:
-					print "[DeviceManager] umount %s" % res[0]
+					print("[DeviceManager] umount %s" % res[0])
 					if os.system("umount -f %s && sleep 2" % res[3]) != 0:
 						return False
 		return True
@@ -365,9 +365,9 @@ class Disks:
 
 	def fdisk(self, device, size, type, fstype=0):
 		if self.isMounted(device):
-			print "[DeviceManager] device is mounted... umount"
+			print("[DeviceManager] device is mounted... umount")
 			if not self.umount(device):
-				print "[DeviceManager] umount failed!"
+				print("[DeviceManager] umount failed!")
 				return -1
 
 		if fstype == 0 or fstype == 1 or fstype == 2:
@@ -379,7 +379,7 @@ class Disks:
 		if type == 0:
 			psize = size / 1048576
 			if psize > 128000:
-				print "[DeviceManager] Detected >128GB disk, using 4k alignment"
+				print("[DeviceManager] Detected >128GB disk, using 4k alignment")
 				flow = "8,,%s\n0,0\n0,0\n0,0\nwrite\n" % ptype
 			else:
 				flow = ",,%s\nwrite\n" % ptype
@@ -410,10 +410,10 @@ class Disks:
 		sfdisk = os.popen(cmd, 'w')
 		sfdisk.write(flow)
 		ret = sfdisk.close()
-		print '[DeviceManager]', ret
+		print('[DeviceManager]', ret)
 		if ret:
 		#if ret == 256 and sfdisk_version_bug:
-		#	print '[DeviceManager] bug is found ', ret
+		#	print('[DeviceManager] bug is found ', ret)
 		#	return 0
 		#else:
 			return -2
@@ -422,12 +422,12 @@ class Disks:
 
 	def chkfs(self, device, partition, fstype=0):
 		fdevice = '%s%d' % (device, partition)
-		print '[DeviceManager] checking device %s' % fdevice
+		print('[DeviceManager] checking device %s' % fdevice)
 		if self.isMountedP(device, partition):
 			oldmp = self.getMountedP(device, partition)
-			print '[DeviceManager] partition is mounted... umount'
+			print('[DeviceManager] partition is mounted... umount')
 			if not self.umountP(device, partition):
-				print '[DeviceManager] umount failed!'
+				print('[DeviceManager] umount failed!')
 				return -1
 		else:
 			oldmp = ''
@@ -466,9 +466,9 @@ class Disks:
 
 		if self.isMountedP(device, partition):
 			oldmp = self.getMountedP(device, partition)
-			print "[DeviceManager] partition is mounted... umount"
+			print("[DeviceManager] partition is mounted... umount")
 			if not self.umountP(device, partition):
-				print "[DeviceManager] umount failed!"
+				print("[DeviceManager] umount failed!")
 				return -2
 		else:
 			oldmp = ""
