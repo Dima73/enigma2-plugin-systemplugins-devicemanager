@@ -297,7 +297,7 @@ class HddFastRemove(Screen):
 					try:
 						mp = self.mountpoints.get(partition[0][:3], int(partition[0][3:]))
 						rmp = self.mountpoints.getRealMount(partition[0][:3], int(partition[0][3:]))
-					except Exception, e:
+					except Exception as e:
 						pass
 					if len(mp) > 0:
 						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (partition[0][3:], mp)))

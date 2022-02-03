@@ -23,7 +23,7 @@ class MountPoints():
 		for entry in self.entries:
 			if entry["modified"]:
 				if len(entry["data"]) != 6:
-					print "[DeviceManager] WARNING: fstab entry with not valid data"
+					print("[DeviceManager] WARNING: fstab entry with not valid data")
 					continue
 				conf.write("\t".join(entry["data"]) + "\n")
 			else:
