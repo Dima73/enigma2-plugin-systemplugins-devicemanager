@@ -36,7 +36,7 @@ class build_trans(cmd.Command):
 						if os.system("msgfmt '%s' -o '%s'" % (src, dest)) != 0:
 							raise Exception("Failed to compile: " + src)
 		else:
-			print("we got no domain -> no translation was compiled"_
+			print("we got no domain -> no translation was compiled")
 
 
 class build(_build):
