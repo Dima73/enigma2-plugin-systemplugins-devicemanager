@@ -17,9 +17,9 @@ from Components.Sources.List import List
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 
-from MountPoints import MountPoints
-from Disks import Disks
-from ExtraMessageBox import ExtraMessageBox
+from .MountPoints import MountPoints
+from .Disks import Disks
+from .ExtraMessageBox import ExtraMessageBox
 
 import os
 import re

@@ -12,12 +12,12 @@ from Components.Label import Label
 from Screens.MessageBox import MessageBox
 from Screens.ChoiceBox import ChoiceBox
 from Screens.Standby import TryQuitMainloop
-from HddPartitions import HddPartitions
-from HddInfo import HddInfo
-from Disks import Disks
-from ExtraMessageBox import ExtraMessageBox
-from ExtraActionBox import ExtraActionBox
-from MountPoints import MountPoints
+from .HddPartitions import HddPartitions
+from .HddInfo import HddInfo
+from .Disks import Disks
+from .ExtraMessageBox import ExtraMessageBox
+from .ExtraActionBox import ExtraActionBox
+from .MountPoints import MountPoints
 import os
 
 FULLHD = False
