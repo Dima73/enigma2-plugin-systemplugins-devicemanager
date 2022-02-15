@@ -1,5 +1,5 @@
 from distutils.core import setup
-import .setup_translate
+import setup_translate
 
 
 setup(name='enigma2-plugin-systemplugins-devicemanager',
