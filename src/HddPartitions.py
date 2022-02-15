@@ -10,11 +10,11 @@ from Components.Button import Button
 from Components.Label import Label
 from Screens.MessageBox import MessageBox
 
-from Disks import Disks
-from ExtraActionBox import ExtraActionBox
-from ExtraMessageBox import ExtraMessageBox
-from MountPoints import MountPoints
-from HddMount import HddMountDevice
+from .Disks import Disks
+from .ExtraActionBox import ExtraActionBox
+from .ExtraMessageBox import ExtraMessageBox
+from .MountPoints import MountPoints
+from .HddMount import HddMountDevice
 import os
 
 FULLHD = False
