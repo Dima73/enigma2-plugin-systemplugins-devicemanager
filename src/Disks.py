@@ -80,7 +80,18 @@ elif fileExists("/proc/stb/info/gbmodel") and not fileExists("/proc/stb/info/hwm
 	except:
 		pass
 
-arm_box = BOX_NAME in ('sf8008', 'sf5008', 'sf8008m', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'multiboxse', 'h9se', 'h11', 'h9combo', 'h9combose', 'h9twin', 'h9twinse', 'h10', 'v8plus', 'hd60', 'hd61', 'pulse4k', 'pulse4kmini', 'dual')
+if fileExists("/proc/stb/info/brandname"):
+	try:
+		l = open("/proc/stb/info/brandname")
+		model = l.read()
+		brandname = str(model.lower().strip())
+		l.close()
+		if brandname == "zgemma":
+			BOX_NAME = brandname
+	except:
+		pass
+
+arm_box = BOX_NAME in ('zgemma', 'sf8008', 'sf5008', 'sf8008m', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'multiboxse', 'h9se', 'h11', 'h9combo', 'h9combose', 'h9twin', 'h9twinse', 'h10', 'v8plus', 'hd60', 'hd61', 'hd66se', 'pulse4k', 'pulse4kmini', 'dual')
 
 
 class Disks:
