@@ -91,8 +91,8 @@ if fileExists("/proc/stb/info/brandname"):
 	except:
 		pass
 
-arm_box = BOX_NAME in ('zgemma', 'sf8008', 'sf5008', 'sf8008m', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'multiboxse', 'h9se', 'h11', 'h9combo', 'h9combose', 'h9twin', 'h9twinse', 'h10', 'v8plus', 'hd60', 'hd61', 'hd66se', 'pulse4k', 'pulse4kmini', 'dual')
-
+arm_box = BOX_NAME in ('zgemma', 'sf8008', 'sf5008', 'sf8008m', 'et13000', 'et11000', 'et1x000', 'duo4k', 'duo4kse', 'uno4k', 'uno4kse', 'ultimo4k', 'solo4k', 'zero4k', 'hd51', 'hd52', 'dm820', 'dm7080', 'sf4008', 'dm900', 'dm920', 'gbquad4k', 'gbue4k', 'lunix3-4k', 'lunix-4k', 'vs1500', 'h7', '8100s', 'e4hd', 'gbmv200', 'multibox', 'multiboxse', 'h9se', 'h11', 'h9combo', 'h9combose', 'h9twin', 'h9twinse', 'h10', 'v8plus', 'hd60', 'hd61', 'hd66se', 'pulse4k', 'pulse4kmini', 'dual', 'osmio4k', 'osmio4kplus', 'osmini4k')
+arm_box1 = BOX_NAME in ('xc7439',' osmio4k', 'osmio4kplus', 'osmini4k')
 
 class Disks:
 	ptypes = {'0': 'Empty',
@@ -203,7 +203,7 @@ class Disks:
 		for part in partitions:
 			res = re.sub("\\s+", " ", part).strip().split(" ")
 			if res and len(res) == 4:
-				if len(res[3]) == 3 and (res[3][:2] == "sd" or res[3][:3] == "hdb") or len(res[3]) == 7 and (res[3][:6] == "mmcblk" and not arm_box):
+				if len(res[3]) == 3 and (res[3][:2] == "sd" or res[3][:3] == "hdb") or len(res[3]) == 7 and (res[3][:6] == "mmcblk" and not arm_box) or (len(res[3]) == 7 and res[3][:7] == "mmcblk1" and not arm_box1):
 					self.disks.append([res[3],
 						int(res[2]) * 1024,
 						self.isRemovable(res[3]),
@@ -218,7 +218,7 @@ class Disks:
 		for part in partitions:
 			res = re.sub("\\s+", " ", part).strip().split(" ")
 			if res and len(res) == 4:
-				if len(res[3]) > 3 and (res[3][:2] == "sd" or res[3][:3] == "hdb") or len(res[3]) > 7 and (res[3][:6] == "mmcblk" and not arm_box):
+				if len(res[3]) > 3 and (res[3][:2] == "sd" or res[3][:3] == "hdb") or len(res[3]) > 7 and (res[3][:6] == "mmcblk" and not arm_box) or (len(res[3]) == 7 and res[3][:7] == "mmcblk1" and not arm_box1):
 					for i in self.disks:
 						if i[0] == res[3][:3] or i[0] == res[3][:7]:
 							i[5].append([res[3],
