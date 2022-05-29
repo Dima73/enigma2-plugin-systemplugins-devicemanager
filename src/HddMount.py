@@ -303,10 +303,10 @@ class HddFastRemove(Screen):
 					except Exception as e:
 						pass
 					if len(mp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (disk[2], mp)))
+						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (count, mp)))
 						self.mounts.append(mp)
 					elif len(rmp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fast: %s)") % (disk[2], rmp)))
+						self.disks.append(MountEntry(disk[3], _("P.%s (Fast: %s)") % (count, rmp)))
 						self.mounts.append(rmp)
 					count += 1
 		if uirefresh:
