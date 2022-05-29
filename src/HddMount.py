@@ -289,22 +289,26 @@ class HddFastRemove(Screen):
 		self.disks = list()
 		self.mounts = list()
 		for disk in self.mdisks.disks:
-			if disk[2] and not disk[7]:
-				diskname = disk[3]
+			disk1 = disk[0]
+			if "mmcblk" in disk[0]:
+				disk1 = disk[0] + "p"
+			if (disk[2] or "mmcblk" in disk[0]) and not disk[7]:
+				count = 1
 				for partition in disk[5]:
 					mp = ""
 					rmp = ""
 					try:
-						mp = self.mountpoints.get(partition[0][:3], int(partition[0][3:]))
-						rmp = self.mountpoints.getRealMount(partition[0][:3], int(partition[0][3:]))
+						mp = self.mountpoints.get(disk1, count)
+						rmp = self.mountpoints.getRealMount(disk1, count)
 					except Exception as e:
 						pass
 					if len(mp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (partition[0][3:], mp)))
+						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (disk[2], mp)))
 						self.mounts.append(mp)
 					elif len(rmp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fast: %s)") % (partition[0][3:], rmp)))
+						self.disks.append(MountEntry(disk[3], _("P.%s (Fast: %s)") % (disk[2], rmp)))
 						self.mounts.append(rmp)
+					count += 1
 		if uirefresh:
 			self["menu"].setList(self.disks)
 
