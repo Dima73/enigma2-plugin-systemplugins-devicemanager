@@ -122,7 +122,10 @@ class HddSetup(Screen):
 
 	def mkfs(self):
 		self.formatted += 1
-		return self.mdisks.mkfs(self.mdisks.disks[self.sindex][0], self.formatted, self.fsresult)
+		disk1 = self.mdisks.disks[self.sindex][0]
+		if "mmcblk" in disk1:
+			disk1 = disk1 + "p"
+		return self.mdisks.mkfs(disk1, self.formatted, self.fsresult)
 
 	def refresh(self):
 		self.disks = list()
@@ -136,10 +139,13 @@ class HddSetup(Screen):
 	def checkDefault(self):
 		mp = MountPoints()
 		mp.read()
+		disk1 = self.mdisks.disks[self.sindex][0]
+		if "mmcblk" in disk1:
+			disk1 = disk1 + "p"
 		if self.asHDD and not mp.exist("/media/hdd"):
-			mp.add(self.mdisks.disks[self.sindex][0], 1, "/media/hdd")
+			mp.add(disk1, 1, "/media/hdd")
 			mp.write()
-			mp.mount(self.mdisks.disks[self.sindex][0], 1, "/media/hdd")
+			mp.mount(disk1, 1, "/media/hdd")
 			os.system("mkdir -p /media/hdd/movie")
 			message = _("Fixed mounted first initialized Storage Device to /media/hdd. It needs a system restart in order to take effect.\nRestart your STB now?")
 			mbox = self.session.openWithCallback(self.restartBox, MessageBox, message, MessageBox.TYPE_YESNO)
@@ -183,17 +189,23 @@ class HddSetup(Screen):
 			self.session.open(MessageBox, _("Partitioning failed!"), MessageBox.TYPE_ERROR)
 
 	def fdisk(self):
-		return self.mdisks.fdisk(self.mdisks.disks[self.sindex][0], self.mdisks.disks[self.sindex][1], self.result, self.fsresult)
+		disk1 = self.mdisks.disks[self.sindex][0]
+		#if "mmcblk" in disk1:
+		#	disk1 = disk1 + "p"
+		return self.mdisks.fdisk(disk1, self.mdisks.disks[self.sindex][1], self.result, self.fsresult)
 
 	def initialaze(self, result):
 		if not self.isExt4Supported():
 			result += 1
 		if result != 6:
+			disk1 = self.mdisks.disks[self.sindex][0]
+			if "mmcblk" in disk1:
+				disk1 = disk1 + "p"
 			self.fsresult = result
 			self.formatted = 0
 			mp = MountPoints()
 			mp.read()
-			mp.deleteDisk(self.mdisks.disks[self.sindex][0])
+			mp.deleteDisk(disk1)
 			mp.write()
 			self.session.openWithCallback(self.fdiskEnded, ExtraActionBox, _("Partitioning..."), _("Initialize disk"), self.fdisk)
 

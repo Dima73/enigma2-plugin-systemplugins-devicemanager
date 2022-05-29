@@ -87,6 +87,9 @@ class HddPartitions(Screen):
 
 		Screen.__init__(self, session)
 		self.disk = disk
+		self.disk1 = self.disk[0]
+		if "mmcblk" in self.disk[0]:
+			self.disk1 = self.disk[0] + "p"
 		self.refreshMP(False)
 
 		self["menu"] = List(self.partitions)
@@ -106,14 +109,13 @@ class HddPartitions(Screen):
 		}, -2)
 
 		self.onShown.append(self.setWindowTitle)
-
-		if len(self.disk[5]) > 0:
+		if len(self.disk[5]) > 0: 
 			if self.disk[5][0][3] == "83" or self.disk[5][0][3] == "7" or self.disk[5][0][3] == "b" or self.disk[5][0][3] == "c":
 				self["key_green"].setText(_("Check"))
 				if sfdisk:
 					self["key_yellow"].setText(_("Format"))
-				mp = self.mountpoints.get(self.disk[0], 1)
-				rmp = self.mountpoints.getRealMount(self.disk[0], 1)
+				mp = self.mountpoints.get(self.disk1, 1)
+				rmp = self.mountpoints.getRealMount(self.disk1, 1)
 				if len(mp) > 0 or len(rmp) > 0:
 					self.mounted = True
 					self["key_blue"].setText(_("Unmount"))
@@ -132,11 +134,11 @@ class HddPartitions(Screen):
 		if len(self.disk[5]) > 0:
 			index = self["menu"].getIndex()
 			if self.disk[5][index][3] == "83" or self.disk[5][index][3] == "7" or self.disk[5][index][3] == "b" or self.disk[5][index][3] == "c":
-				self["key_blue"].setText(_("Check"))
+				self["key_green"].setText(_("Check"))
 				if sfdisk:
 					self["key_yellow"].setText(_("Format"))
-				mp = self.mountpoints.get(self.disk[0], index + 1)
-				rmp = self.mountpoints.getRealMount(self.disk[0], index + 1)
+				mp = self.mountpoints.get(self.disk1, index + 1)
+				rmp = self.mountpoints.getRealMount(self.disk1, index + 1)
 				if len(mp) > 0 or len(rmp) > 0:
 					self.mounted = True
 					self["key_blue"].setText(_("Unmount"))
@@ -146,7 +148,10 @@ class HddPartitions(Screen):
 
 	def chkfs(self):
 		disks = Disks()
-		ret = disks.chkfs(self.disk[5][self.index][0][:3], self.index + 1, self.fstype)
+		disk1 = self.disk[5][self.index][0][:3]
+		if "mmc" in disk1:
+			disk1 = self.disk1
+		ret = disks.chkfs(disk1, self.index + 1, self.fstype)
 		if ret == 0:
 			self.session.open(MessageBox, _("Check disk terminated with success"), MessageBox.TYPE_INFO)
 		elif ret == -1:
@@ -156,7 +161,10 @@ class HddPartitions(Screen):
 
 	def mkfs(self):
 		disks = Disks()
-		ret = disks.mkfs(self.disk[5][self.index][0][:3], self.index + 1, self.fstype)
+		disk1 = self.disk[5][self.index][0][:3]
+		if "mmc" in disk1:
+			disk1 = self.disk1
+		ret = disks.mkfs(disk1, self.index + 1, self.fstype)
 		if ret == 0:
 			self.session.open(MessageBox, _("Format terminated with success"), MessageBox.TYPE_INFO)
 		elif ret == -2:
@@ -235,8 +243,8 @@ class HddPartitions(Screen):
 		count = 1
 		for part in self.disk[5]:
 			capacity = "%d MB" % (part[1] / (1024 * 1024))
-			mp = self.mountpoints.get(self.disk[0], count)
-			rmp = self.mountpoints.getRealMount(self.disk[0], count)
+			mp = self.mountpoints.get(self.disk1, count)
+			rmp = self.mountpoints.getRealMount(self.disk1, count)
 			if len(mp) > 0:
 				self.partitions.append(PartitionEntry(_("P. %d - %s (Fixed: %s)") % (count, part[2], mp), capacity))
 			elif len(rmp) > 0:
@@ -258,8 +266,8 @@ class HddPartitions(Screen):
 		if len(self.partitions) > 0:
 			self.sindex = self['menu'].getIndex()
 			if self.mounted:
-				mp = self.mountpoints.get(self.disk[0], self.sindex + 1)
-				rmp = self.mountpoints.getRealMount(self.disk[0], self.sindex + 1)
+				mp = self.mountpoints.get(self.disk1, self.sindex + 1)
+				rmp = self.mountpoints.getRealMount(self.disk1, self.sindex + 1)
 				if len(mp) > 0:
 					if self.mountpoints.isMounted(mp):
 						if self.mountpoints.umount(mp):
@@ -274,7 +282,7 @@ class HddPartitions(Screen):
 					self.mountpoints.umount(rmp)
 				self.refreshMP()
 			else:
-				self.session.openWithCallback(self.refreshMP, HddMountDevice, self.disk[0], self.sindex + 1)
+				self.session.openWithCallback(self.refreshMP, HddMountDevice, self.disk1, self.sindex + 1)
 
 	def quit(self):
 		self.close()

@@ -231,16 +231,16 @@ msgid "Mount as /media/hdd5"
 msgstr "Смонтировать как /media/hdd5"
 
 msgid "Mount as /media/usb"
-msgstr "Смонтировать как /media/usb1"
+msgstr "Смонтировать как /media/usb"
 
 msgid "Mount as /media/usb1"
 msgstr "Смонтировать как /media/usb1"
 
 msgid "Mount as /media/usb2"
-msgstr "Смонтировать как /media/usb5"
+msgstr "Смонтировать как /media/usb2"
 
 msgid "Mount as /media/usb3"
-msgstr "Смонтировать как /media/usb4"
+msgstr "Смонтировать как /media/usb3"
 
 msgid "Mount as /media/usb4"
 msgstr "Смонтировать как /media/usb4"
@@ -255,7 +255,7 @@ msgid "Mount on custom path"
 msgstr "Смонтировать по пользовательскому пути в /media"
 
 msgid "Mount point exist!"
-msgstr "Тоска монтирования уже существует!"
+msgstr "Точка монтирования уже существует!"
 
 msgid "Mountpoints"
 msgstr "Точка монтирования"
