@@ -20,6 +20,8 @@ def supportExtFat():
 		pass
 	else:
 		os.system("echo exfat-fuse >> /etc/filesystems && opkg update && opkg install fuse-exfat")
+	if not os.path.isfile("/sbin/hdparm.hdparm"):
+		os.system("opkg update && opkg install hdparm")
 
 
 def deviceManagerMain(session, **kwargs):
