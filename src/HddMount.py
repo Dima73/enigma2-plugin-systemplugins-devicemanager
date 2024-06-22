@@ -226,7 +226,7 @@ class HddFastRemove(Screen):
 				<convert type="TemplatedMultiContent">
 					{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-						MultiContentEntryText(pos = (65, 3), size = (190, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+						MultiContentEntryText(pos = (65, 3), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 						MultiContentEntryText(pos = (165, 27), size = (290, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
 						"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
@@ -246,7 +246,7 @@ class HddFastRemove(Screen):
 				<convert type="TemplatedMultiContent">
 					{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
-						MultiContentEntryText(pos = (65, 3), size = (190, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
+						MultiContentEntryText(pos = (65, 3), size = (300, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
 						MultiContentEntryText(pos = (165, 27), size = (290, 38), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
 						"fonts": [gFont("Regular", 22), gFont("Regular", 18)],
@@ -258,15 +258,15 @@ class HddFastRemove(Screen):
 
 	def __init__(self, session):
 		Screen.__init__(self, session)
+		self["key_blue"] = Button()
 		self.refreshMP(False)
 
 		self["menu"] = List(self.disks)
-		self["key_red"] = Button(_("Unmount"))
-		self["key_blue"] = Button(_("Exit"))
+		self["key_red"] = Button(_("Exit"))
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
-			"blue": self.quit,
-			"red": self.red,
+			"blue": self.red,
+			"red": self.quit,
 			"cancel": self.quit,
 		}, -2)
 
@@ -289,6 +289,14 @@ class HddFastRemove(Screen):
 		self.disks = list()
 		self.mounts = list()
 		for disk in self.mdisks.disks:
+			if disk[4] and disk[3]:
+				fullname = disk[4] + " (" + disk[3] + ")"
+			elif disk[4]:
+				fullname = disk[4]
+			elif disk[3]:
+				fullname = disk[3]
+			else:
+				fullname = "'-?-'"
 			disk1 = disk[0]
 			if "mmcblk" in disk[0]:
 				disk1 = disk[0] + "p"
@@ -303,14 +311,15 @@ class HddFastRemove(Screen):
 					except Exception as e:
 						pass
 					if len(mp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fixed: %s)") % (count, mp)))
+						self.disks.append(MountEntry(fullname, _("P.%s (Fixed: %s)") % (count, mp)))
 						self.mounts.append(mp)
 					elif len(rmp) > 0:
-						self.disks.append(MountEntry(disk[3], _("P.%s (Fast: %s)") % (count, rmp)))
+						self.disks.append(MountEntry(fullname, _("P.%s (Fast: %s)") % (count, rmp)))
 						self.mounts.append(rmp)
 					count += 1
 		if uirefresh:
 			self["menu"].setList(self.disks)
+		self["key_blue"].setText(self.disks and _("Unmount") or "")
 
 	def quit(self):
 		self.close()

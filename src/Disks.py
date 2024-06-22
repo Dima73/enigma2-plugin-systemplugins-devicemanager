@@ -292,20 +292,24 @@ class Disks:
 
 	def getModel(self, device):
 		try:
-			return open("/sys/block/%s/device/model" % device, "r").read().strip()
+			model = open("/sys/block/%s/device/model" % device, "r").read().strip()
+			return str(model).replace('\n', '')
 		except:
 			try:
-				return open("/sys/block/%s/device/name" % device, "r").read().strip()
+				model = open("/sys/block/%s/device/name" % device, "r").read().strip()
+				return str(model).replace('\n', '')
 			except:
 				try:
-					return open("/sys/block/%s+p/device/name" % device, "r").read().strip()
+					model = open("/sys/block/%s+p/device/name" % device, "r").read().strip()
+					return str(model).replace('\n', '')
 				except:
 					pass
 		return ""
 
 	def getVendor(self, device):
 		try:
-			return open("/sys/block/%s/device/vendor" % device, "r").read().strip()
+			vendor = open("/sys/block/%s/device/vendor" % device, "r").read().strip()
+			return str(vendor).replace('\n', '')
 		except:
 			return ""
 

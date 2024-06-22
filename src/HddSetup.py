@@ -94,8 +94,22 @@ class HddSetup(Screen):
 		self.mdisks = Disks()
 		self.asHDD = False
 		for disk in self.mdisks.disks:
-			capacity = "%d MB" % (disk[1] / (1024 * 1024))
-			self.disks.append(DiskEntry(disk[3], capacity, disk[2], disk[6], disk[7]))
+			size = int(disk[1] / 1024)
+			if (((float(size) / 1024) / 1024) / 1024) > 1:
+				capacity = "%d %s" % (int(round((((float(size) / 1024) / 1024) / 1024), 2)), "TB")
+			elif ((size / 1024) / 1024) > 1:
+				capacity = "%d %s" % (int(round(((float(size) / 1024) / 1024), 2)), "GB")
+			else:
+				capacity = "%d %s" % (int(round((float(size) / 1024), 2)), "MB")
+			if disk[4] and disk[3]:
+				fullname = disk[4] + " (" + disk[3] + ")"
+			elif disk[4]:
+				fullname = disk[4]
+			elif disk[3]:
+				fullname = disk[3]
+			else:
+				fullname = "-?-"
+			self.disks.append(DiskEntry(fullname, capacity, disk[2], disk[6], disk[7]))
 		self["menu"] = List(self.disks)
 		self["key_red"] = Button(_("Exit"))
 		self["key_green"] = Button(_("Info"))
@@ -132,7 +146,15 @@ class HddSetup(Screen):
 		self.mdisks = Disks()
 		for disk in self.mdisks.disks:
 			capacity = "%d MB" % (disk[1] / (1024 * 1024))
-			self.disks.append(DiskEntry(disk[3], capacity, disk[2], disk[6], disk[7]))
+			if disk[4] and disk[3]:
+				fullname = disk[4] + " (" + disk[3] + ")"
+			elif disk[4]:
+				fullname = disk[4]
+			elif disk[3]:
+				fullname = disk[3]
+			else:
+				fullname = "-?-"
+			self.disks.append(DiskEntry(fullname, capacity, disk[2], disk[6], disk[7]))
 
 		self["menu"].setList(self.disks)
 

@@ -73,7 +73,7 @@ class HddPartitions(Screen):
 					{"template": [
 						MultiContentEntryPixmapAlphaTest(pos = (5, 0), size = (48, 48), png = 0),
 						MultiContentEntryText(pos = (65, 10), size = (360, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 1),
-						MultiContentEntryText(pos = (435, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
+						MultiContentEntryText(pos = (430, 10), size = (125, 38), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_TOP, text = 2),
 						],
 						"fonts": [gFont("Regular", 18)],
 						"itemHeight": 50
@@ -98,7 +98,15 @@ class HddPartitions(Screen):
 		self["key_green"] = Button("")
 		self["key_yellow"] = Button("")
 		self["key_blue"] = Button("")
-		self["label_disk"] = Label("%s - %s" % (self.disk[0], self.disk[3]))
+		if disk[4] and disk[3]:
+			fullname = disk[4] + " (" + disk[3] + ")"
+		elif disk[4]:
+			fullname = disk[4]
+		elif disk[3]:
+			fullname = disk[3]
+		else:
+			fullname = "'-?-'"
+		self["label_disk"] = Label("%s - %s" % (self.disk[0], fullname))
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
 		{
 			"red": self.quit,
@@ -242,7 +250,13 @@ class HddPartitions(Screen):
 		self.mountpoints.read()
 		count = 1
 		for part in self.disk[5]:
-			capacity = "%d MB" % (part[1] / (1024 * 1024))
+			size = int(part[1] / 1024)
+			if (((float(size) / 1024) / 1024) / 1024) > 1:
+				capacity = "%d %s" % (int(round((((float(size) / 1024) / 1024) / 1024), 2)), "TB")
+			elif ((size / 1024) / 1024) > 1:
+				capacity = "%d %s" % (int(round(((float(size) / 1024) / 1024), 2)), "GB")
+			else:
+				capacity = "%d %s" % (int(round((float(size) / 1024), 2)), "MB")
 			mp = self.mountpoints.get(self.disk1, count)
 			rmp = self.mountpoints.getRealMount(self.disk1, count)
 			if len(mp) > 0:
