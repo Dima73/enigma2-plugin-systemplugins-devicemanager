@@ -412,27 +412,27 @@ class Disks:
 		elif fstype == 5:
 			ptype = "b"
 		if type == 0:
-			psize = size / 1048576
+			psize = size // 1048576
 			if psize > 128000:
 				print("[DeviceManager] Detected >128GB disk, using 4k alignment")
 				flow = "8,,%s\n0,0\n0,0\n0,0\nwrite\n" % ptype
 			else:
 				flow = ",,%s\nwrite\n" % ptype
 		elif type == 1:
-			psize = size / 1048576 / 2
+			psize = size // 1048576 // 2
 			flow = ",%dM,%s\n,,%s\nwrite\n" % (psize, ptype, ptype)
 		elif type == 2:
-			psize = size / 1048576 / 4 * 3
+			psize = size // 1048576 // 4 * 3
 			flow = ",%dM,%s\n,,%s\nwrite\n" % (psize, ptype, ptype)
 		elif type == 3:
-			psize = size / 1048576 / 3
+			psize = size // 1048576 // 3
 			flow = ",%dM,%s\n,%dM,%s\n,,%s\nwrite\n" % (psize,
 				ptype,
 				psize,
 				ptype,
 				ptype)
 		elif type == 4:
-			psize = size / 1048576 / 4
+			psize = size // 1048576 // 4
 			flow = ",%dM,%s\n,%dM,%s\n,%dM,%s\n,,%s\nwrite\n" % (psize,
 				ptype,
 				psize,
@@ -507,7 +507,7 @@ class Disks:
 				return -2
 		else:
 			oldmp = ""
-		psize = size / 1024
+		psize = size // 1024
 		if fstype == 0:
 			cmd = "mkfs.ext4 -F "
 			if psize > 20000:
